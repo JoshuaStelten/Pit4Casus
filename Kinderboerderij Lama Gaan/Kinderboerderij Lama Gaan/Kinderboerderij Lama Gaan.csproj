@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
+    <Content Include="About\Openingstijden.aspx" />
     <Content Include="About\OverOns.aspx" />
     <Content Include="About\Prijzen.aspx" />
     <Content Include="Admin\DoNotUse.html" />
@@ -80,15 +81,33 @@
     <Content Include="App_Themes\Thema\Thema.css" />
     <Content Include="Database\DoNotUse.html" />
     <Content Include="Default.aspx" />
-    <Content Include="Dieren\DoNotUse.html" />
-    <Content Include="Evenementen\DoNotUse.html" />
-    <Content Include="Inkoop-Verkoop\DoNotUse.html" />
-    <Content Include="Login\DoNotUse.html" />
+    <Content Include="Dieren\Alpaca.aspx" />
+    <Content Include="Dieren\Ezel.aspx" />
+    <Content Include="Dieren\Kip.aspx" />
+    <Content Include="Dieren\Konijn.aspx" />
+    <Content Include="Dieren\Lama.aspx" />
+    <Content Include="Dieren\Pauw.aspx" />
+    <Content Include="Dieren\Schaap.aspx" />
+    <Content Include="Evenementen\Informatie.aspx" />
+    <Content Include="Evenementen\Inschrijven.aspx" />
+    <Content Include="Inkoop-Verkoop\Inkoop.aspx" />
+    <Content Include="Inkoop-Verkoop\Verkoop.aspx" />
+    <Content Include="Login\Default.aspx" />
     <Content Include="Medewerkers\DoNotUse.html" />
+    <Content Include="Medewerkers\Rooster.aspx" />
+    <Content Include="Media\Foto%27s.aspx" />
+    <Content Include="Media\Video%27s.aspx" />
     <Content Include="Scripts\modernizr-2.7.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About\Openingstijden.aspx.cs">
+      <DependentUpon>Openingstijden.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About\Openingstijden.aspx.designer.cs">
+      <DependentUpon>Openingstijden.aspx</DependentUpon>
+    </Compile>
     <Compile Include="About\OverOns.aspx.cs">
       <DependentUpon>OverOns.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,11 +124,121 @@
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Alpaca.aspx.cs">
+      <DependentUpon>Alpaca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Alpaca.aspx.designer.cs">
+      <DependentUpon>Alpaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieren\Ezel.aspx.cs">
+      <DependentUpon>Ezel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Ezel.aspx.designer.cs">
+      <DependentUpon>Ezel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieren\Kip.aspx.cs">
+      <DependentUpon>Kip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Kip.aspx.designer.cs">
+      <DependentUpon>Kip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieren\Konijn.aspx.cs">
+      <DependentUpon>Konijn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Konijn.aspx.designer.cs">
+      <DependentUpon>Konijn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieren\Lama.aspx.cs">
+      <DependentUpon>Lama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Lama.aspx.designer.cs">
+      <DependentUpon>Lama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieren\Pauw.aspx.cs">
+      <DependentUpon>Pauw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Pauw.aspx.designer.cs">
+      <DependentUpon>Pauw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieren\Schaap.aspx.cs">
+      <DependentUpon>Schaap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Schaap.aspx.designer.cs">
+      <DependentUpon>Schaap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Evenementen\Informatie.aspx.cs">
+      <DependentUpon>Informatie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Evenementen\Informatie.aspx.designer.cs">
+      <DependentUpon>Informatie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Evenementen\Inschrijven.aspx.cs">
+      <DependentUpon>Inschrijven.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Evenementen\Inschrijven.aspx.designer.cs">
+      <DependentUpon>Inschrijven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inkoop-Verkoop\Inkoop.aspx.cs">
+      <DependentUpon>Inkoop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inkoop-Verkoop\Inkoop.aspx.designer.cs">
+      <DependentUpon>Inkoop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inkoop-Verkoop\Verkoop.aspx.cs">
+      <DependentUpon>Verkoop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inkoop-Verkoop\Verkoop.aspx.designer.cs">
+      <DependentUpon>Verkoop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\Frontend.master.cs">
       <DependentUpon>Frontend.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medewerkers\Rooster.aspx.cs">
+      <DependentUpon>Rooster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medewerkers\Rooster.aspx.designer.cs">
+      <DependentUpon>Rooster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Media\Foto%27s.aspx.cs">
+      <DependentUpon>Foto%27s.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Media\Foto%27s.aspx.designer.cs">
+      <DependentUpon>Foto%27s.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Media\Video%27s.aspx.cs">
+      <DependentUpon>Video%27s.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Media\Video%27s.aspx.designer.cs">
+      <DependentUpon>Video%27s.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
