@@ -57,17 +57,58 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Thema\Button.skin" />
+    <Content Include="MasterPages\Frontend.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="About\OverOns.aspx" />
+    <Content Include="About\Prijzen.aspx" />
+    <Content Include="Admin\DoNotUse.html" />
+    <Content Include="App_Themes\Thema\Images\Header.jpg" />
+    <Content Include="App_Themes\Thema\Images\MenuBackground.jpg" />
+    <Content Include="App_Themes\Thema\Images\PleaseWait.gif" />
+    <Content Include="App_Themes\Thema\Images\Sidebar.jpg" />
+    <Content Include="App_Themes\Thema\Thema.css" />
+    <Content Include="Database\DoNotUse.html" />
+    <Content Include="Default.aspx" />
+    <Content Include="Dieren\DoNotUse.html" />
+    <Content Include="Evenementen\DoNotUse.html" />
+    <Content Include="Inkoop-Verkoop\DoNotUse.html" />
+    <Content Include="Login\DoNotUse.html" />
+    <Content Include="Medewerkers\DoNotUse.html" />
+    <Content Include="Scripts\modernizr-2.7.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About\OverOns.aspx.cs">
+      <DependentUpon>OverOns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About\OverOns.aspx.designer.cs">
+      <DependentUpon>OverOns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About\Prijzen.aspx.cs">
+      <DependentUpon>Prijzen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About\Prijzen.aspx.designer.cs">
+      <DependentUpon>Prijzen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Frontend.master.cs">
+      <DependentUpon>Frontend.master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
