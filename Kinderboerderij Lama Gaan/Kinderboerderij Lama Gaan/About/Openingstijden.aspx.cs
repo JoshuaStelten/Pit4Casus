@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Kinderboerderij_Lama_Gaan.About
 {
-    public partial class Openingstijden : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class Openingstijden : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }
