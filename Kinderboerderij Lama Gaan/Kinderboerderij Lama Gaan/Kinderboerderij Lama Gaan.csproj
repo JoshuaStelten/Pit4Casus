@@ -57,38 +57,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About\Openingstijden.aspx" />
     <Content Include="App_Themes\Thema\Button.skin" />
-    <Content Include="bin\Kinderboerderij Lama Gaan.dll" />
-    <Content Include="bin\Kinderboerderij Lama Gaan.pdb" />
-    <Content Include="Dieren\Alpaca.aspx" />
-    <Content Include="Dieren\Ezel.aspx" />
-    <Content Include="Dieren\Kip.aspx" />
-    <Content Include="Dieren\Konijn.aspx" />
-    <Content Include="Dieren\Lama.aspx" />
-    <Content Include="Dieren\Pauw.aspx" />
-    <Content Include="Dieren\Schaap.aspx" />
-    <Content Include="Evenementen\Informatie.aspx" />
-    <Content Include="Evenementen\Inschrijven.aspx" />
-    <Content Include="Inkoop-Verkoop\Inkoop.aspx" />
-    <Content Include="Inkoop-Verkoop\Verkoop.aspx" />
-    <Content Include="Login\Default.aspx" />
     <Content Include="MasterPages\Frontend.master" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\Kinderboerderij Lama Gaan.csprojResolveAssemblyReference.cache" />
-    <Content Include="bin\Kinderboerderij Lama Gaan.dll.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="Medewerkers\Rooster.aspx" />
-    <Content Include="Media\Foto%27s.aspx" />
-    <Content Include="Media\Video%27s.aspx" />
-    <Content Include="obj\Debug\Kinderboerderij Lama Gaan.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Kinderboerderij Lama Gaan.dll" />
-    <Content Include="obj\Debug\Kinderboerderij Lama Gaan.pdb" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -113,13 +89,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About\Openingstijden.aspx.cs">
-      <DependentUpon>Openingstijden.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About\Openingstijden.aspx.designer.cs">
-      <DependentUpon>Openingstijden.aspx</DependentUpon>
-    </Compile>
     <Compile Include="About\OverOns.aspx.cs">
       <DependentUpon>OverOns.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,124 +105,11 @@
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Alpaca.aspx.cs">
-      <DependentUpon>Alpaca.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Alpaca.aspx.designer.cs">
-      <DependentUpon>Alpaca.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Ezel.aspx.cs">
-      <DependentUpon>Ezel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Ezel.aspx.designer.cs">
-      <DependentUpon>Ezel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Kip.aspx.cs">
-      <DependentUpon>Kip.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Kip.aspx.designer.cs">
-      <DependentUpon>Kip.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Konijn.aspx.cs">
-      <DependentUpon>Konijn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Konijn.aspx.designer.cs">
-      <DependentUpon>Konijn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Lama.aspx.cs">
-      <DependentUpon>Lama.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Lama.aspx.designer.cs">
-      <DependentUpon>Lama.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Pauw.aspx.cs">
-      <DependentUpon>Pauw.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Pauw.aspx.designer.cs">
-      <DependentUpon>Pauw.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Schaap.aspx.cs">
-      <DependentUpon>Schaap.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Schaap.aspx.designer.cs">
-      <DependentUpon>Schaap.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Evenementen\Informatie.aspx.cs">
-      <DependentUpon>Informatie.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Evenementen\Informatie.aspx.designer.cs">
-      <DependentUpon>Informatie.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Evenementen\Inschrijven.aspx.cs">
-      <DependentUpon>Inschrijven.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Evenementen\Inschrijven.aspx.designer.cs">
-      <DependentUpon>Inschrijven.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Inkoop-Verkoop\Inkoop.aspx.cs">
-      <DependentUpon>Inkoop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inkoop-Verkoop\Inkoop.aspx.designer.cs">
-      <DependentUpon>Inkoop.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Inkoop-Verkoop\Verkoop.aspx.cs">
-      <DependentUpon>Verkoop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inkoop-Verkoop\Verkoop.aspx.designer.cs">
-      <DependentUpon>Verkoop.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\Frontend.master.cs">
       <DependentUpon>Frontend.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Medewerkers\Rooster.aspx.cs">
-      <DependentUpon>Rooster.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Medewerkers\Rooster.aspx.designer.cs">
-      <DependentUpon>Rooster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Media\Foto%27s.aspx.cs">
-      <DependentUpon>Foto%27s.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Media\Foto%27s.aspx.designer.cs">
-      <DependentUpon>Foto%27s.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Media\Video%27s.aspx.cs">
-      <DependentUpon>Video%27s.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Media\Video%27s.aspx.designer.cs">
-      <DependentUpon>Video%27s.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
