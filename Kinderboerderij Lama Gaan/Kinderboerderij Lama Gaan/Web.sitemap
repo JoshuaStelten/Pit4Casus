@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="~/" title="Home" description="Home">
+
+    <siteMapNode url="~/Default" title="Home"
+    description="Go to the homepage" />
+
+    <siteMapNode url="~/Reviews/Default" title="Info"
+    description="Informatie over Lama Gaan">
+      <siteMapNode url="~/Reviews/AllByGenre" title="Over ons"
+      description="Over Lama Gaan" />
+      <siteMapNode url="~/Reviews/All.aspx" title="Prijzen"
+      description="Prijzen van Lama Gaan" />
+      <siteMapNode url="~/Reviews/All.aspx" title="Openingstijden"
+      description="Openingstijden van Lama Gaan" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Reviews/Default" title="Dieren"
+    description="Onze Dieren">
+      <siteMapNode url="~/Reviews/AllByGenre" title="Alpaca"
+      description="De spugende Alpaca" />
+      <siteMapNode url="~/Reviews/All.aspx" title="Pony"
+      description="De Shetland Pony" />
+      <siteMapNode url="~/Reviews/All.aspx" title="Kip"
+      description="De KFC Kip" />
+    </siteMapNode>
+
+    <siteMapNode url="~/About/Default.aspx" title="Media"
+    description="About this Site">
+      <siteMapNode url="~/About/Contact.aspx" title="Foto's"
+      description="Foto's" />
+      <siteMapNode url="~/About/Contact.aspx" title="Video's"
+      description="Video's." />
+    </siteMapNode>
+
+    <siteMapNode url="~/About/Default.aspx" title="Evenementen"
+    description="About this Site">
+      <siteMapNode url="~/About/Contact.aspx" title="Informatie"
+      description="Informatie over Evenementen" />
+      <siteMapNode url="~/About/Contact.aspx" title="Inschrijven"
+      description="Inschrijven voor een evenement." />
+      <siteMapNode url="~/About/AboutUs.aspx" title="Prijzen"
+      description="Prijzen van evenementen" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Login.aspx" title="Login"
+    description="Log in to this web site" />
+  </siteMapNode>
+</siteMap>
