@@ -59,6 +59,8 @@
   <ItemGroup>
     <Content Include="About\Info.aspx" />
     <Content Include="App_Themes\Thema\Button.skin" />
+    <Content Include="Dieren\Default.aspx" />
+    <Content Include="Inkoop-Verkoop\Default.aspx" />
     <Content Include="MasterPages\Frontend.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -66,6 +68,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Media\Default.aspx" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -94,7 +97,6 @@
     <Content Include="Inkoop-Verkoop\Inkoop.aspx" />
     <Content Include="Inkoop-Verkoop\Verkoop.aspx" />
     <Content Include="Login\Default.aspx" />
-    <Content Include="Medewerkers\DoNotUse.html" />
     <Content Include="Medewerkers\Rooster.aspx" />
     <Content Include="Media\Foto%27s.aspx" />
     <Content Include="Media\Video%27s.aspx" />
@@ -140,6 +142,13 @@
     </Compile>
     <Compile Include="Dieren\Alpaca.aspx.designer.cs">
       <DependentUpon>Alpaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dieren\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dieren\Ezel.aspx.cs">
       <DependentUpon>Ezel.aspx</DependentUpon>
@@ -197,6 +206,13 @@
     <Compile Include="Evenementen\Inschrijven.aspx.designer.cs">
       <DependentUpon>Inschrijven.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Inkoop-Verkoop\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inkoop-Verkoop\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Inkoop-Verkoop\Inkoop.aspx.cs">
       <DependentUpon>Inkoop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +244,13 @@
     </Compile>
     <Compile Include="Medewerkers\Rooster.aspx.designer.cs">
       <DependentUpon>Rooster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Media\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Media\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Media\Foto%27s.aspx.cs">
       <DependentUpon>Foto%27s.aspx</DependentUpon>

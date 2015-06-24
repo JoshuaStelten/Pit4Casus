@@ -4,12 +4,39 @@
     <siteMapNode url="~/Default.aspx" title="Home"
     description="Go to the homepage" />
 
-    <siteMapNode url="~/About/OverOns.aspx" title="Over ons"
-    description="Info over Lama gaan">
-      <siteMapNode url="~/About/Prijzen.aspx" title="Prijzen"
-      description="Prijzen van Lama gaan" />
-      <siteMapNode url="~/About/Openingstijden.aspx" title="Openingstijden"
-      description="Openingstijden van Lama gaan" />
+    <siteMapNode url="~/About/OverOns.aspx" title="Over ons" description="Info over Lama gaan">
+      <siteMapNode url="~/About/Prijzen.aspx" title="Prijzen" description="Prijzen van Lama gaan" />
+      <siteMapNode url="~/About/Openingstijden.aspx" title="Openingstijden" Description="Openingstijden van Lama gaan" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Dieren/Default.aspx" title="Dieren" description="Info over de dieren">
+      <siteMapNode url="~/Dieren/Alpaca.aspx" title="Alpaca" description="Info over de Alpaca"/>
+      <siteMapNode url="~/Dieren/Ezel.aspx" title="Ezel" description="Info over de Ezel"/>
+      <siteMapNode url="~/Dieren/Kip.aspx" title="Kip" description="Info over de Kip"/>
+      <siteMapNode url="~/Dieren/Konijn.aspx" title="Konijn" description="Info over de Konijn"/>
+      <siteMapNode url="~/Dieren/Lama.aspx" title="Lama" description="Info over de Lama"/>
+      <siteMapNode url="~/Dieren/Pauw.aspx" title="Pauw" description="Info over de Pauw"/>
+      <siteMapNode url="~/Dieren/Schaap.aspx" title="Schaap" description="Info over de Schaap"/>
+    </siteMapNode>
+
+    <siteMapNode url="~/Evenementen/Informatie.aspx" title="Evenementen" description="Info over de Evenementen">
+      <siteMapNode url="~/Dieren/Inschrijven.aspx" title="Inschrijven" description="Info over de Inschrijven"/>
+    </siteMapNode>
+
+    <siteMapNode url="~/Inkoop-Verkoop/Default.aspx" title="Inkoop en verkoop" description="Info over de inkoop en de verkoop">
+      <siteMapNode url="~/Inkoop-Verkoop/Inkoop.aspx" title="Inkoop" description="Info over de inkooplijsten"/>
+      <siteMapNode url="~/Inkoop-Verkoop/Verkoop.aspx" title="verkoop" description="Info over de verkooplijsten"/>
+    </siteMapNode>
+
+    <siteMapNode url="~/Medewerkers/Rooster.aspx" title="Rooster" description="Het rooster van de medewerkers">
+    </siteMapNode>
+
+    <siteMapNode url="~/Media/Default.aspx" title="Media" description="De foto albums en de video's">
+      <siteMapNode url="~/Media/Foto's.aspx" title="Foto's" description="Het foto ablbum"/>
+      <siteMapNode url="~/Media/Video's.aspx" title="Video's" description="De video's"/>
+    </siteMapNode>
+
+    <siteMapNode url="~/Login/Default.aspx" title="Login" description="Het inloggen op de website">
     </siteMapNode>
   </siteMapNode>
 </siteMap>
