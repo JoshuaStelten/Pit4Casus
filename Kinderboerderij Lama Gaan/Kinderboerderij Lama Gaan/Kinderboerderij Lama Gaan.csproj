@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="App_Themes\Thema\Button.skin" />
     <Content Include="Dieren\Default.aspx" />
+    <Content Include="Evenementen\Inschrijven.aspx" />
     <Content Include="Inkoop-Verkoop\Default.aspx" />
     <Content Include="MasterPages\Frontend.master" />
     <None Include="Web.Debug.config">
@@ -92,7 +93,6 @@
     <Content Include="Dieren\Pauw.aspx" />
     <Content Include="Dieren\Schaap.aspx" />
     <Content Include="Evenementen\Informatie.aspx" />
-    <Content Include="Evenementen\Inschrijven.aspx" />
     <Content Include="Inkoop-Verkoop\Inkoop.aspx" />
     <Content Include="Inkoop-Verkoop\Verkoop.aspx" />
     <Content Include="Login\Default.aspx" />

@@ -13,18 +13,18 @@
       <siteMapNode url="~/Dieren/Alpaca.aspx" title="Alpaca" description="Info over de Alpaca"/>
       <siteMapNode url="~/Dieren/Ezel.aspx" title="Ezel" description="Info over de Ezel"/>
       <siteMapNode url="~/Dieren/Kip.aspx" title="Kip" description="Info over de Kip"/>
-      <siteMapNode url="~/Dieren/Konijn.aspx" title="Konijn" description="Info over de Konijn"/>
+      <siteMapNode url="~/Dieren/Konijn.aspx" title="Konijn" description="Info over het Konijn"/>
       <siteMapNode url="~/Dieren/Lama.aspx" title="Lama" description="Info over de Lama"/>
       <siteMapNode url="~/Dieren/Pauw.aspx" title="Pauw" description="Info over de Pauw"/>
-      <siteMapNode url="~/Dieren/Schaap.aspx" title="Schaap" description="Info over de Schaap"/>
+      <siteMapNode url="~/Dieren/Schaap.aspx" title="Schaap" description="Info over het schaap"/>
     </siteMapNode>
 
     <siteMapNode url="~/Evenementen/Informatie.aspx" title="Evenementen" description="Info over de Evenementen">
-      <siteMapNode url="~/Dieren/Inschrijven.aspx" title="Inschrijven" description="Info over de Inschrijven"/>
+      <siteMapNode url="~/Evenementen/Inschrijven.aspx" title="Inschrijven" description="Inschrijven"/>
     </siteMapNode>
 
     <siteMapNode url="~/Media/Default.aspx" title="Media" description="De foto albums en de video's">
-      <siteMapNode url="~/Media/Foto's.aspx" title="Foto's" description="Het foto ablbum"/>
+      <siteMapNode url="~/Media/Foto's.aspx" title="Foto's" description="Het foto album"/>
       <siteMapNode url="~/Media/Video's.aspx" title="Video's" description="De video's"/>
     </siteMapNode>
 
