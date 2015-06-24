@@ -59,6 +59,13 @@
   <ItemGroup>
     <Content Include="App_Themes\Thema\Button.skin" />
     <Content Include="Dieren\Default.aspx" />
+    <Content Include="Images\ezel.jpeg" />
+    <Content Include="Images\kip.jpg" />
+    <Content Include="Images\konijn.jpg" />
+    <Content Include="Images\l-Who-said-llamas-couldnt-be-cute..jpg" />
+    <Content Include="Images\Lama.jpg" />
+    <Content Include="Images\pauw.jpg" />
+    <Content Include="Images\schaap.jpg" />
     <Content Include="Inkoop-Verkoop\Default.aspx" />
     <Content Include="MasterPages\Frontend.master" />
     <None Include="Web.Debug.config">
@@ -260,9 +267,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

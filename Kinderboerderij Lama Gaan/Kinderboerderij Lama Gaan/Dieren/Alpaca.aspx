@@ -7,7 +7,7 @@
         .auto-style3 {
         }
         .auto-style4 {
-            width: 85px;
+            width: 233px;
         }
         </style>
 </asp:Content>
@@ -18,7 +18,7 @@
                 <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="http://cdn.cutestpaw.com/wp-content/uploads/2013/01/l-Who-said-llamas-couldnt-be-cute..jpg" Width="200px" />
             </td>
             <td style="font-size: x-large">
-                <h1>De Alpaca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
+                <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; De Alpaca&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h1>
             </td>
         </tr>
         <tr>
