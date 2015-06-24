@@ -57,7 +57,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About\Info.aspx" />
     <Content Include="App_Themes\Thema\Button.skin" />
     <Content Include="Dieren\Default.aspx" />
     <Content Include="Inkoop-Verkoop\Default.aspx" />
@@ -124,13 +123,6 @@
     </Compile>
     <Compile Include="About\Prijzen.aspx.designer.cs">
       <DependentUpon>Prijzen.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="About\Info.aspx.cs">
-      <DependentUpon>Info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About\Info.aspx.designer.cs">
-      <DependentUpon>Info.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
