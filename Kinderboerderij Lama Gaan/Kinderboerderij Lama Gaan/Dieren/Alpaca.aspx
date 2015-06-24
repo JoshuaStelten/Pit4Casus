@@ -6,12 +6,15 @@
         }
         .auto-style3 {
         }
+        .auto-style4 {
+            width: 85px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">
     <table class="auto-style1">
         <tr>
-            <td>
+            <td class="auto-style4">
                 <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="http://cdn.cutestpaw.com/wp-content/uploads/2013/01/l-Who-said-llamas-couldnt-be-cute..jpg" Width="200px" />
             </td>
             <td style="font-size: x-large">
