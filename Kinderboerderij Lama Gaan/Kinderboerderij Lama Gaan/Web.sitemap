@@ -23,14 +23,6 @@
       <siteMapNode url="~/Dieren/Inschrijven.aspx" title="Inschrijven" description="Info over de Inschrijven"/>
     </siteMapNode>
 
-    <siteMapNode url="~/Inkoop-Verkoop/Default.aspx" title="Inkoop en verkoop" description="Info over de inkoop en de verkoop">
-      <siteMapNode url="~/Inkoop-Verkoop/Inkoop.aspx" title="Inkoop" description="Info over de inkooplijsten"/>
-      <siteMapNode url="~/Inkoop-Verkoop/Verkoop.aspx" title="verkoop" description="Info over de verkooplijsten"/>
-    </siteMapNode>
-
-    <siteMapNode url="~/Medewerkers/Rooster.aspx" title="Rooster" description="Het rooster van de medewerkers">
-    </siteMapNode>
-
     <siteMapNode url="~/Media/Default.aspx" title="Media" description="De foto albums en de video's">
       <siteMapNode url="~/Media/Foto's.aspx" title="Foto's" description="Het foto ablbum"/>
       <siteMapNode url="~/Media/Video's.aspx" title="Video's" description="De video's"/>
