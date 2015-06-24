@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">
     <h1>Openingstijden</h1>
     <p>
-        Onze kinderboerderij is het gehele jaar geopend, zowel in de winter als in de zomer.</p>
+        Onze kinderboerderij is het gehele jaar geopend, zowel in de winter en herfst als in de lente en zomer.</p>
     <table class="auto-style1">
         <tr>
             <td>Maandag</td>
