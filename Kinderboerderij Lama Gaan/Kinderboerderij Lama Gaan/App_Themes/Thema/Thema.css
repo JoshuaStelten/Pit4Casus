@@ -298,3 +298,8 @@ img
   font-style: italic;
   display: block;
 }
+
+.ErrorMessage
+{
+color: Red;
+}
