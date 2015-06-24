@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Kinderboerderij Lama Gaan.mdf" />
+    <Content Include="App_Data\Kinderboerderij Lama Gaan_log.ldf">
+      <DependentUpon>Kinderboerderij Lama Gaan.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Themes\Thema\Button.skin" />
     <Content Include="Dieren\Default.aspx" />
     <Content Include="Images\ezel.jpeg" />
@@ -89,7 +93,6 @@
     <Content Include="App_Themes\Thema\Images\PleaseWait.gif" />
     <Content Include="App_Themes\Thema\Images\Sidebar.jpg" />
     <Content Include="App_Themes\Thema\Thema.css" />
-    <Content Include="Database\DoNotUse.html" />
     <Content Include="Default.aspx" />
     <Content Include="Dieren\Alpaca.aspx" />
     <Content Include="Dieren\Ezel.aspx" />
