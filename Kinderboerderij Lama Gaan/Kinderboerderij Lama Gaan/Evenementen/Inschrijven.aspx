@@ -2,16 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
-            width: 300px;
+            width: 100%;
         }
         .auto-style2 {
-            width: 800px;
+            width: 37%;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">
-        Schrijf je hier in voor een evenement. Iedereen moet zich apart inschrijven.
-   <table class="auto-style1">
+        Schrijf je hier in voor een van onze evenementen. Elke deelnemer moet zich apart inschrijven.<br />
+&nbsp;<table class="auto-style1">
         <tr>
             <td class="auto-style2">Evenement:</td>
             <td>
@@ -46,15 +46,15 @@
             <td class="auto-style2">Geslacht:</td>
             <td>
                 <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem>Jongen</asp:ListItem>
                     <asp:ListItem>Meisje</asp:ListItem>
+                    <asp:ListItem>Jongen</asp:ListItem>
                 </asp:DropDownList>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Email adres:</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" TextMode="Email"></asp:TextBox>
             </td>
         </tr>
     </table>

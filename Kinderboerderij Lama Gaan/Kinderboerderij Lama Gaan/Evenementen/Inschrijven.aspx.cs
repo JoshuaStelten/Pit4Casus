@@ -13,5 +13,15 @@ namespace Kinderboerderij_Lama_Gaan.Evenementen
         {
 
         }
+
+        protected void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox4_TextChanged1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
