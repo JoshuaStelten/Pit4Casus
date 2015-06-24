@@ -23,7 +23,7 @@
         </asp:ContentPlaceHolder>
       </section>
       <aside id="Sidebar">
-          <a href="/"></a>
+          <a href="/Evenementen/Inschrijven.aspx"></a>
       </aside>
       <footer>
       </footer>
