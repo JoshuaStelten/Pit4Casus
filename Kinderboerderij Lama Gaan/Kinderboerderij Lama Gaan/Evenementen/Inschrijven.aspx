@@ -10,6 +10,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">
+    <h1>Inschrijven</h1>
         Schrijf je hier in voor een van onze evenementen. Elke deelnemer moet zich apart inschrijven.<br />
 &nbsp;<table class="auto-style1">
         <tr>
