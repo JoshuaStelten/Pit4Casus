@@ -38,7 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,11 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Kinderboerderij Lama Gaan.mdf" />
-    <Content Include="App_Data\Kinderboerderij Lama Gaan_log.ldf">
-      <DependentUpon>Kinderboerderij Lama Gaan.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Themes\Thema\Button.skin" />
+    <Content Include="Controls\ContactForm.ascx" />
     <Content Include="Dieren\Default.aspx" />
     <Content Include="Images\ezel.jpeg" />
     <Content Include="Images\kip.jpg" />
@@ -72,6 +77,24 @@
     <Content Include="Images\schaap.jpg" />
     <Content Include="Inkoop-Verkoop\Default.aspx" />
     <Content Include="MasterPages\Frontend.master" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -79,6 +102,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="Media\Default.aspx" />
+    <Content Include="Model1.edmx.sql" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -134,9 +158,19 @@
     <Compile Include="About\Prijzen.aspx.designer.cs">
       <DependentUpon>Prijzen.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ContactForm.ascx.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactForm.ascx.designer.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dieren.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Dieren\Alpaca.aspx.cs">
       <DependentUpon>Alpaca.aspx</DependentUpon>
@@ -194,6 +228,12 @@
     <Compile Include="Dieren\Schaap.aspx.designer.cs">
       <DependentUpon>Schaap.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EntreePrijs.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Evenement.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Evenementen\Informatie.aspx.cs">
       <DependentUpon>Informatie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -207,6 +247,9 @@
     </Compile>
     <Compile Include="Evenementen\Inschrijven.aspx.designer.cs">
       <DependentUpon>Inschrijven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Foto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Inkoop-Verkoop\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -229,6 +272,12 @@
     <Compile Include="Inkoop-Verkoop\Verkoop.aspx.designer.cs">
       <DependentUpon>Verkoop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Inkoop.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inschrijving.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Login\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,6 +288,12 @@
     <Compile Include="MasterPages\Frontend.master.cs">
       <DependentUpon>Frontend.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedewerkerRooster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medewerkers.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Medewerkers\Rooster.aspx.cs">
       <DependentUpon>Rooster.aspx</DependentUpon>
@@ -268,9 +323,47 @@
     <Compile Include="Media\Video%27s.aspx.designer.cs">
       <DependentUpon>Video%27s.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Openingstijden.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Verkoop.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Video.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VoerSchema.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Winkel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
