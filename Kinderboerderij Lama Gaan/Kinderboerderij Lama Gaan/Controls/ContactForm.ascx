@@ -7,6 +7,20 @@
         height: 23px;
     }
 </style>
+<script>
+function validateTelefoonNummer(source, args)
+{
+var phoneHome = document.getElementById('<%= TbTelefoonNummer.ClientID %>');
+if (phoneHome.value != '')
+{
+args.IsValid = true;
+}
+else
+{
+args.IsValid = false;
+}
+}
+</script>
 
 <table class="auto-style1">
     <tr>
@@ -50,7 +64,9 @@
         <td>
             <asp:TextBox ID="TbTelefoonNummer" runat="server" TextMode="Number"></asp:TextBox>
         </td>
-        <td>&nbsp;</td>
+        <td>
+            <asp:CustomValidator ID="CustomValidator1" runat="server" ClientValidationFunction="validatePhoneNumbers" CssClass="ErrorMessage" Display="Dynamic" ErrorMessage="Geef uw telefoonnummer" OnServerValidate="CustomValidator1_ServerValidate">*</asp:CustomValidator>
+        </td>
     </tr>
     <tr>
         <td>Comments:</td>
@@ -72,6 +88,11 @@
             <asp:Button ID="BtVerzenden" runat="server" Text="Verzenden" />
         </td>
         <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="ErrorMessage" />
+        </td>
     </tr>
 </table>
 
