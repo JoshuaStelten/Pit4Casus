@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="DierenSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Dieren)">
+        <MappingFragment StoreEntitySet="DierenSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="naam" ColumnName="naam" />
+          <ScalarProperty Name="geslacht" ColumnName="geslacht" />
+          <ScalarProperty Name="soort" ColumnName="soort" />
+          <ScalarProperty Name="voerId" ColumnName="voerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedewerkerRoosterSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.MedewerkerRooster)">
+        <MappingFragment StoreEntitySet="MedewerkerRoosterSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="medewerkerId" ColumnName="medewerkerId" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="dag" ColumnName="dag" />
+          <ScalarProperty Name="tijdVan" ColumnName="tijdVan" />
+          <ScalarProperty Name="tijdTot" ColumnName="tijdTot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VideoSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Video)">
+        <MappingFragment StoreEntitySet="VideoSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="videoUrl" ColumnName="videoUrl" />
+          <ScalarProperty Name="naam" ColumnName="naam" />
+          <ScalarProperty Name="beschrijving" ColumnName="beschrijving" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntreePrijsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.EntreePrijs)">
+        <MappingFragment StoreEntitySet="EntreePrijsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="leeftijdId" ColumnName="leeftijdId" />
+          <ScalarProperty Name="prijs" ColumnName="prijs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InschrijvingSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Inschrijving)">
+        <MappingFragment StoreEntitySet="InschrijvingSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="voornaam" ColumnName="voornaam" />
+          <ScalarProperty Name="achternaam" ColumnName="achternaam" />
+          <ScalarProperty Name="leeftijd" ColumnName="leeftijd" />
+          <ScalarProperty Name="geslacht" ColumnName="geslacht" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="evenementId" ColumnName="evenementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VerkoopSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Verkoop)">
+        <MappingFragment StoreEntitySet="VerkoopSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="winkelId" ColumnName="winkelId" />
+          <ScalarProperty Name="aantal" ColumnName="aantal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EvenementSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Evenement)">
+        <MappingFragment StoreEntitySet="EvenementSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="naam" ColumnName="naam" />
+          <ScalarProperty Name="prijs" ColumnName="prijs" />
+          <ScalarProperty Name="aantalDeelnemers" ColumnName="aantalDeelnemers" />
+          <ScalarProperty Name="maxDeelnemers" ColumnName="maxDeelnemers" />
+          <ScalarProperty Name="beschrijving" ColumnName="beschrijving" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedewerkersSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Medewerkers)">
+        <MappingFragment StoreEntitySet="MedewerkersSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="naam" ColumnName="naam" />
+          <ScalarProperty Name="achternaam" ColumnName="achternaam" />
+          <ScalarProperty Name="leeftijd" ColumnName="leeftijd" />
+          <ScalarProperty Name="geslacht" ColumnName="geslacht" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="functie" ColumnName="functie" />
+          <ScalarProperty Name="telnr" ColumnName="telnr" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VoerSchemaSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.VoerSchema)">
+        <MappingFragment StoreEntitySet="VoerSchemaSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="voerId" ColumnName="voerId" />
+          <ScalarProperty Name="dierenId" ColumnName="dierenId" />
+          <ScalarProperty Name="dag" ColumnName="dag" />
+          <ScalarProperty Name="tijd" ColumnName="tijd" />
+          <ScalarProperty Name="medewerkersId" ColumnName="medewerkersId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FotoSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Foto)">
+        <MappingFragment StoreEntitySet="FotoSet1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="imgUrl" ColumnName="imgUrl" />
+          <ScalarProperty Name="naam" ColumnName="naam" />
+          <ScalarProperty Name="beschrijving" ColumnName="beschrijving" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpeningstijdenSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Openingstijden)">
+        <MappingFragment StoreEntitySet="OpeningstijdenSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="week" ColumnName="week" />
+          <ScalarProperty Name="dag" ColumnName="dag" />
+          <ScalarProperty Name="tijdVan" ColumnName="tijdVan" />
+          <ScalarProperty Name="tijdTot" ColumnName="tijdTot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WinkelSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Winkel)">
+        <MappingFragment StoreEntitySet="WinkelSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="naam" ColumnName="naam" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InkoopSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Inkoop)">
+        <MappingFragment StoreEntitySet="InkoopSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="aantal" ColumnName="aantal" />
+          <ScalarProperty Name="beschrijving" ColumnName="beschrijving" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Product)">
+        <MappingFragment StoreEntitySet="ProductSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="naam" ColumnName="naam" />
+          <ScalarProperty Name="prijs" ColumnName="prijs" />
+          <ScalarProperty Name="bestelEenheid" ColumnName="bestelEenheid" />
+          <ScalarProperty Name="voorraad" ColumnName="voorraad" />
+          <ScalarProperty Name="afkomst" ColumnName="afkomst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProductDieren" TypeName="Model1.ProductDieren" StoreEntitySet="ProductDieren">
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Product_Id" />
+      </EndProperty>
+      <EndProperty Name="Dieren">
+        <ScalarProperty Name="Id" ColumnName="Dieren_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MedewerkerRoosterMedewerkers" TypeName="Model1.MedewerkerRoosterMedewerkers" StoreEntitySet="MedewerkersSet1">
+      <EndProperty Name="MedewerkerRooster">
+        <ScalarProperty Name="Id" ColumnName="MedewerkerRooster_Id" />
+      </EndProperty>
+      <EndProperty Name="Medewerkers">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InschrijvingEvenement" TypeName="Model1.InschrijvingEvenement" StoreEntitySet="InschrijvingSet1">
+      <EndProperty Name="Evenement">
+        <ScalarProperty Name="Id" ColumnName="Evenement_Id" />
+      </EndProperty>
+      <EndProperty Name="Inschrijving">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VerkoopProduct" TypeName="Model1.VerkoopProduct" StoreEntitySet="ProductSet">
+      <EndProperty Name="Verkoop">
+        <ScalarProperty Name="Id" ColumnName="Verkoop_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VerkoopWinkel" TypeName="Model1.VerkoopWinkel" StoreEntitySet="VerkoopSet1">
+      <EndProperty Name="Winkel">
+        <ScalarProperty Name="Id" ColumnName="Winkel_Id" />
+      </EndProperty>
+      <EndProperty Name="Verkoop">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VoerSchemaMedewerkers" TypeName="Model1.VoerSchemaMedewerkers" StoreEntitySet="VoerSchemaMedewerkers">
+      <EndProperty Name="VoerSchema">
+        <ScalarProperty Name="Id" ColumnName="VoerSchema_Id" />
+      </EndProperty>
+      <EndProperty Name="Medewerkers">
+        <ScalarProperty Name="Id" ColumnName="Medewerkers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InkoopProduct" TypeName="Model1.InkoopProduct" StoreEntitySet="ProductSet">
+      <EndProperty Name="Inkoop">
+        <ScalarProperty Name="Id" ColumnName="Inkoop_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VoerSchemaDieren" TypeName="Model1.VoerSchemaDieren" StoreEntitySet="DierenSet">
+      <EndProperty Name="VoerSchema">
+        <ScalarProperty Name="Id" ColumnName="VoerSchema_Id" />
+      </EndProperty>
+      <EndProperty Name="Dieren">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VoerSchemaProduct" TypeName="Model1.VoerSchemaProduct" StoreEntitySet="ProductSet">
+      <EndProperty Name="VoerSchema">
+        <ScalarProperty Name="Id" ColumnName="VoerSchema_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="VoerSchema_Id" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

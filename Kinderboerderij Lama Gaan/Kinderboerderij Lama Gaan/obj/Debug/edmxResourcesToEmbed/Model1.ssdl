@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="DierenSet" EntityType="Model1.Store.DierenSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MedewerkerRoosterSet" EntityType="Model1.Store.MedewerkerRoosterSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VideoSet1" EntityType="Model1.Store.VideoSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EntreePrijsSet" EntityType="Model1.Store.EntreePrijsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InschrijvingSet1" EntityType="Model1.Store.InschrijvingSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VerkoopSet1" EntityType="Model1.Store.VerkoopSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EvenementSet1" EntityType="Model1.Store.EvenementSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MedewerkersSet1" EntityType="Model1.Store.MedewerkersSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VoerSchemaSet1" EntityType="Model1.Store.VoerSchemaSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FotoSet1" EntityType="Model1.Store.FotoSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OpeningstijdenSet" EntityType="Model1.Store.OpeningstijdenSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WinkelSet" EntityType="Model1.Store.WinkelSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InkoopSet" EntityType="Model1.Store.InkoopSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductSet" EntityType="Model1.Store.ProductSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductDieren" EntityType="Model1.Store.ProductDieren" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VoerSchemaMedewerkers" EntityType="Model1.Store.VoerSchemaMedewerkers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ProductDieren_Product" Association="Model1.Store.FK_ProductDieren_Product">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="ProductDieren" EntitySet="ProductDieren" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductDieren_Dieren" Association="Model1.Store.FK_ProductDieren_Dieren">
+      <End Role="Dieren" EntitySet="DierenSet" />
+      <End Role="ProductDieren" EntitySet="ProductDieren" />
+    </AssociationSet>
+    <AssociationSet Name="MedewerkerRoosterMedewerkers" Association="Model1.Store.MedewerkerRoosterMedewerkers">
+      <End Role="MedewerkerRooster" EntitySet="MedewerkerRoosterSet" />
+      <End Role="Medewerkers" EntitySet="MedewerkersSet1" />
+    </AssociationSet>
+    <AssociationSet Name="InschrijvingEvenement" Association="Model1.Store.InschrijvingEvenement">
+      <End Role="Inschrijving" EntitySet="InschrijvingSet1" />
+      <End Role="Evenement" EntitySet="EvenementSet1" />
+    </AssociationSet>
+    <AssociationSet Name="VerkoopProduct" Association="Model1.Store.VerkoopProduct">
+      <End Role="Verkoop" EntitySet="VerkoopSet1" />
+      <End Role="Product" EntitySet="ProductSet" />
+    </AssociationSet>
+    <AssociationSet Name="VerkoopWinkel" Association="Model1.Store.VerkoopWinkel">
+      <End Role="Verkoop" EntitySet="VerkoopSet1" />
+      <End Role="Winkel" EntitySet="WinkelSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VoerSchemaMedewerkers_VoerSchema" Association="Model1.Store.FK_VoerSchemaMedewerkers_VoerSchema">
+      <End Role="VoerSchema" EntitySet="VoerSchemaSet1" />
+      <End Role="VoerSchemaMedewerkers" EntitySet="VoerSchemaMedewerkers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VoerSchemaMedewerkers_Medewerkers" Association="Model1.Store.FK_VoerSchemaMedewerkers_Medewerkers">
+      <End Role="Medewerkers" EntitySet="MedewerkersSet1" />
+      <End Role="VoerSchemaMedewerkers" EntitySet="VoerSchemaMedewerkers" />
+    </AssociationSet>
+    <AssociationSet Name="InkoopProduct" Association="Model1.Store.InkoopProduct">
+      <End Role="Inkoop" EntitySet="InkoopSet" />
+      <End Role="Product" EntitySet="ProductSet" />
+    </AssociationSet>
+    <AssociationSet Name="VoerSchemaDieren" Association="Model1.Store.VoerSchemaDieren">
+      <End Role="VoerSchema" EntitySet="VoerSchemaSet1" />
+      <End Role="Dieren" EntitySet="DierenSet" />
+    </AssociationSet>
+    <AssociationSet Name="VoerSchemaProduct" Association="Model1.Store.VoerSchemaProduct">
+      <End Role="VoerSchema" EntitySet="VoerSchemaSet1" />
+      <End Role="Product" EntitySet="ProductSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DierenSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="geslacht" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="soort" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="voerId" Type="int" Nullable="false" />
+    <Property Name="VoerSchema_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedewerkerRoosterSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="medewerkerId" Type="int" Nullable="false" />
+    <Property Name="week" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dag" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tijdVan" Type="time" Nullable="true" />
+    <Property Name="tijdTot" Type="time" Nullable="true" />
+  </EntityType>
+  <EntityType Name="VideoSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="videoUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="naam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="beschrijving" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="EntreePrijsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leeftijdId" Type="int" Nullable="false" />
+    <Property Name="prijs" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="InschrijvingSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="voornaam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="achternaam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="leeftijd" Type="int" Nullable="false" />
+    <Property Name="geslacht" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="evenementId" Type="int" Nullable="false" />
+    <Property Name="Evenement_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VerkoopSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productId" Type="int" Nullable="false" />
+    <Property Name="winkelId" Type="int" Nullable="false" />
+    <Property Name="aantal" Type="int" Nullable="false" />
+    <Property Name="Winkel_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EvenementSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="prijs" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="aantalDeelnemers" Type="int" Nullable="false" />
+    <Property Name="maxDeelnemers" Type="int" Nullable="true" />
+    <Property Name="beschrijving" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedewerkersSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="achternaam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="leeftijd" Type="int" Nullable="false" />
+    <Property Name="geslacht" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="functie" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="telnr" Type="int" Nullable="false" />
+    <Property Name="adres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MedewerkerRooster_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VoerSchemaSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="voerId" Type="int" Nullable="false" />
+    <Property Name="dierenId" Type="int" Nullable="false" />
+    <Property Name="dag" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tijd" Type="time" Nullable="false" />
+    <Property Name="medewerkersId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FotoSet1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imgUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="naam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="beschrijving" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="OpeningstijdenSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="week" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dag" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tijdVan" Type="time" Nullable="true" />
+    <Property Name="tijdTot" Type="time" Nullable="true" />
+  </EntityType>
+  <EntityType Name="WinkelSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="type" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InkoopSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aantal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="beschrijving" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="productId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="naam" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="prijs" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="bestelEenheid" Type="int" Nullable="false" />
+    <Property Name="voorraad" Type="int" Nullable="false" />
+    <Property Name="afkomst" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Verkoop_Id" Type="int" Nullable="false" />
+    <Property Name="Inkoop_Id" Type="int" Nullable="false" />
+    <Property Name="VoerSchema_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ProductDieren">
+    <Key>
+      <PropertyRef Name="Product_Id" />
+      <PropertyRef Name="Dieren_Id" />
+    </Key>
+    <Property Name="Product_Id" Type="int" Nullable="false" />
+    <Property Name="Dieren_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VoerSchemaMedewerkers">
+    <Key>
+      <PropertyRef Name="VoerSchema_Id" />
+      <PropertyRef Name="Medewerkers_Id" />
+    </Key>
+    <Property Name="VoerSchema_Id" Type="int" Nullable="false" />
+    <Property Name="Medewerkers_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="MedewerkerRoosterMedewerkers">
+    <End Role="MedewerkerRooster" Type="Model1.Store.MedewerkerRoosterSet" Multiplicity="1" />
+    <End Role="Medewerkers" Type="Model1.Store.MedewerkersSet1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedewerkerRooster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medewerkers">
+        <PropertyRef Name="MedewerkerRooster_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InschrijvingEvenement">
+    <End Role="Inschrijving" Type="Model1.Store.InschrijvingSet1" Multiplicity="*" />
+    <End Role="Evenement" Type="Model1.Store.EvenementSet1" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Evenement">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inschrijving">
+        <PropertyRef Name="Evenement_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VerkoopProduct">
+    <End Role="Verkoop" Type="Model1.Store.VerkoopSet1" Multiplicity="1" />
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Verkoop">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Verkoop_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VerkoopWinkel">
+    <End Role="Verkoop" Type="Model1.Store.VerkoopSet1" Multiplicity="*" />
+    <End Role="Winkel" Type="Model1.Store.WinkelSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Winkel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Verkoop">
+        <PropertyRef Name="Winkel_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InkoopProduct">
+    <End Role="Inkoop" Type="Model1.Store.InkoopSet" Multiplicity="1" />
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inkoop">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Inkoop_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VoerSchemaDieren">
+    <End Role="VoerSchema" Type="Model1.Store.VoerSchemaSet1" Multiplicity="1" />
+    <End Role="Dieren" Type="Model1.Store.DierenSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VoerSchema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dieren">
+        <PropertyRef Name="VoerSchema_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VoerSchemaProduct">
+    <End Role="VoerSchema" Type="Model1.Store.VoerSchemaSet1" Multiplicity="0..1" />
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VoerSchema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="VoerSchema_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDieren_Product">
+    <End Role="Product" Type="Model1.Store.ProductSet" Multiplicity="1" />
+    <End Role="ProductDieren" Type="Model1.Store.ProductDieren" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDieren">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductDieren_Dieren">
+    <End Role="ProductDieren" Type="Model1.Store.ProductDieren" Multiplicity="*" />
+    <End Role="Dieren" Type="Model1.Store.DierenSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Dieren">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductDieren">
+        <PropertyRef Name="Dieren_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VoerSchemaMedewerkers_VoerSchema">
+    <End Role="VoerSchema" Type="Model1.Store.VoerSchemaSet1" Multiplicity="1" />
+    <End Role="VoerSchemaMedewerkers" Type="Model1.Store.VoerSchemaMedewerkers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VoerSchema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VoerSchemaMedewerkers">
+        <PropertyRef Name="VoerSchema_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VoerSchemaMedewerkers_Medewerkers">
+    <End Role="VoerSchemaMedewerkers" Type="Model1.Store.VoerSchemaMedewerkers" Multiplicity="*" />
+    <End Role="Medewerkers" Type="Model1.Store.MedewerkersSet1" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Medewerkers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="VoerSchemaMedewerkers">
+        <PropertyRef Name="Medewerkers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

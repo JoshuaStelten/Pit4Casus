@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DierenSet" EntityType="Model1.Dieren" />
+    <EntitySet Name="MedewerkerRoosterSet" EntityType="Model1.MedewerkerRooster" />
+    <EntitySet Name="VideoSet1" EntityType="Model1.Video" />
+    <EntitySet Name="EntreePrijsSet" EntityType="Model1.EntreePrijs" />
+    <EntitySet Name="InschrijvingSet1" EntityType="Model1.Inschrijving" />
+    <EntitySet Name="VerkoopSet1" EntityType="Model1.Verkoop" />
+    <EntitySet Name="EvenementSet1" EntityType="Model1.Evenement" />
+    <EntitySet Name="MedewerkersSet1" EntityType="Model1.Medewerkers" />
+    <EntitySet Name="VoerSchemaSet1" EntityType="Model1.VoerSchema" />
+    <EntitySet Name="FotoSet1" EntityType="Model1.Foto" />
+    <EntitySet Name="OpeningstijdenSet" EntityType="Model1.Openingstijden" />
+    <EntitySet Name="WinkelSet" EntityType="Model1.Winkel" />
+    <EntitySet Name="InkoopSet" EntityType="Model1.Inkoop" />
+    <EntitySet Name="ProductSet" EntityType="Model1.Product" />
+    <AssociationSet Name="ProductDieren" Association="Model1.ProductDieren">
+      <End Role="Product" EntitySet="ProductSet" />
+      <End Role="Dieren" EntitySet="DierenSet" />
+    </AssociationSet>
+    <AssociationSet Name="MedewerkerRoosterMedewerkers" Association="Model1.MedewerkerRoosterMedewerkers">
+      <End Role="MedewerkerRooster" EntitySet="MedewerkerRoosterSet" />
+      <End Role="Medewerkers" EntitySet="MedewerkersSet1" />
+    </AssociationSet>
+    <AssociationSet Name="InschrijvingEvenement" Association="Model1.InschrijvingEvenement">
+      <End Role="Inschrijving" EntitySet="InschrijvingSet1" />
+      <End Role="Evenement" EntitySet="EvenementSet1" />
+    </AssociationSet>
+    <AssociationSet Name="VerkoopProduct" Association="Model1.VerkoopProduct">
+      <End Role="Verkoop" EntitySet="VerkoopSet1" />
+      <End Role="Product" EntitySet="ProductSet" />
+    </AssociationSet>
+    <AssociationSet Name="VerkoopWinkel" Association="Model1.VerkoopWinkel">
+      <End Role="Verkoop" EntitySet="VerkoopSet1" />
+      <End Role="Winkel" EntitySet="WinkelSet" />
+    </AssociationSet>
+    <AssociationSet Name="VoerSchemaMedewerkers" Association="Model1.VoerSchemaMedewerkers">
+      <End Role="VoerSchema" EntitySet="VoerSchemaSet1" />
+      <End Role="Medewerkers" EntitySet="MedewerkersSet1" />
+    </AssociationSet>
+    <AssociationSet Name="InkoopProduct" Association="Model1.InkoopProduct">
+      <End Role="Inkoop" EntitySet="InkoopSet" />
+      <End Role="Product" EntitySet="ProductSet" />
+    </AssociationSet>
+    <AssociationSet Name="VoerSchemaDieren" Association="Model1.VoerSchemaDieren">
+      <End Role="VoerSchema" EntitySet="VoerSchemaSet1" />
+      <End Role="Dieren" EntitySet="DierenSet" />
+    </AssociationSet>
+    <AssociationSet Name="VoerSchemaProduct" Association="Model1.VoerSchemaProduct">
+      <End Role="VoerSchema" EntitySet="VoerSchemaSet1" />
+      <End Role="Product" EntitySet="ProductSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Dieren">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naam" Type="String" Nullable="false" />
+    <Property Name="geslacht" Type="String" Nullable="false" />
+    <Property Name="soort" Type="String" Nullable="false" />
+    <Property Name="voerId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Model1.ProductDieren" FromRole="Dieren" ToRole="Product" />
+    <NavigationProperty Name="VoerSchema" Relationship="Model1.VoerSchemaDieren" FromRole="Dieren" ToRole="VoerSchema" />
+  </EntityType>
+  <EntityType Name="MedewerkerRooster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="medewerkerId" Type="Int32" Nullable="false" />
+    <Property Name="week" Type="String" Nullable="false" />
+    <Property Name="dag" Type="String" Nullable="false" />
+    <Property Name="tijdVan" Type="Time" Nullable="true" />
+    <Property Name="tijdTot" Type="Time" Nullable="true" />
+    <NavigationProperty Name="Medewerkers" Relationship="Model1.MedewerkerRoosterMedewerkers" FromRole="MedewerkerRooster" ToRole="Medewerkers" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="videoUrl" Type="String" Nullable="false" />
+    <Property Name="naam" Type="String" Nullable="false" />
+    <Property Name="beschrijving" Type="String" Nullable="true" />
+  </EntityType>
+  <EntityType Name="EntreePrijs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="leeftijdId" Type="Int32" Nullable="false" />
+    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="Inschrijving">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="voornaam" Type="String" Nullable="false" />
+    <Property Name="achternaam" Type="String" Nullable="false" />
+    <Property Name="leeftijd" Type="Int32" Nullable="false" />
+    <Property Name="geslacht" Type="String" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" />
+    <Property Name="evenementId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Evenement" Relationship="Model1.InschrijvingEvenement" FromRole="Inschrijving" ToRole="Evenement" />
+  </EntityType>
+  <EntityType Name="Verkoop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productId" Type="Int32" Nullable="false" />
+    <Property Name="winkelId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Model1.VerkoopProduct" FromRole="Verkoop" ToRole="Product" />
+    <NavigationProperty Name="Winkel" Relationship="Model1.VerkoopWinkel" FromRole="Verkoop" ToRole="Winkel" />
+    <Property Name="aantal" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Evenement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naam" Type="String" Nullable="false" />
+    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" />
+    <Property Name="aantalDeelnemers" Type="Int32" Nullable="false" />
+    <Property Name="maxDeelnemers" Type="Int32" Nullable="true" />
+    <Property Name="beschrijving" Type="String" Nullable="false" />
+    <NavigationProperty Name="Inschrijving" Relationship="Model1.InschrijvingEvenement" FromRole="Evenement" ToRole="Inschrijving" />
+  </EntityType>
+  <EntityType Name="Medewerkers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naam" Type="String" Nullable="false" />
+    <Property Name="achternaam" Type="String" Nullable="false" />
+    <Property Name="leeftijd" Type="Int32" Nullable="false" />
+    <Property Name="geslacht" Type="String" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="true" />
+    <Property Name="functie" Type="String" Nullable="false" />
+    <Property Name="telnr" Type="Int32" Nullable="false" />
+    <Property Name="adres" Type="String" Nullable="false" />
+    <NavigationProperty Name="MedewerkerRooster" Relationship="Model1.MedewerkerRoosterMedewerkers" FromRole="Medewerkers" ToRole="MedewerkerRooster" />
+    <NavigationProperty Name="VoerSchema" Relationship="Model1.VoerSchemaMedewerkers" FromRole="Medewerkers" ToRole="VoerSchema" />
+  </EntityType>
+  <EntityType Name="VoerSchema">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="voerId" Type="Int32" Nullable="false" />
+    <Property Name="dierenId" Type="Int32" Nullable="false" />
+    <Property Name="dag" Type="String" Nullable="false" />
+    <Property Name="tijd" Type="Time" Nullable="false" />
+    <Property Name="medewerkersId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Medewerkers" Relationship="Model1.VoerSchemaMedewerkers" FromRole="VoerSchema" ToRole="Medewerkers" />
+    <NavigationProperty Name="Dieren" Relationship="Model1.VoerSchemaDieren" FromRole="VoerSchema" ToRole="Dieren" />
+    <NavigationProperty Name="Product" Relationship="Model1.VoerSchemaProduct" FromRole="VoerSchema" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Foto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imgUrl" Type="String" Nullable="false" />
+    <Property Name="naam" Type="String" Nullable="false" />
+    <Property Name="beschrijving" Type="String" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Openingstijden">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="week" Type="String" Nullable="false" />
+    <Property Name="dag" Type="String" Nullable="false" />
+    <Property Name="tijdVan" Type="Time" Nullable="true" />
+    <Property Name="tijdTot" Type="Time" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Winkel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naam" Type="String" Nullable="false" />
+    <Property Name="type" Type="String" Nullable="false" />
+    <NavigationProperty Name="Verkoop" Relationship="Model1.VerkoopWinkel" FromRole="Winkel" ToRole="Verkoop" />
+  </EntityType>
+  <EntityType Name="Inkoop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aantal" Type="String" Nullable="false" />
+    <Property Name="beschrijving" Type="String" Nullable="true" />
+    <Property Name="productId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Model1.InkoopProduct" FromRole="Inkoop" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naam" Type="String" Nullable="false" />
+    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" />
+    <Property Name="bestelEenheid" Type="Int32" Nullable="false" />
+    <Property Name="voorraad" Type="Int32" Nullable="false" />
+    <Property Name="afkomst" Type="String" Nullable="false" />
+    <NavigationProperty Name="Dieren" Relationship="Model1.ProductDieren" FromRole="Product" ToRole="Dieren" />
+    <NavigationProperty Name="Verkoop" Relationship="Model1.VerkoopProduct" FromRole="Product" ToRole="Verkoop" />
+    <NavigationProperty Name="Inkoop" Relationship="Model1.InkoopProduct" FromRole="Product" ToRole="Inkoop" />
+    <NavigationProperty Name="VoerSchema" Relationship="Model1.VoerSchemaProduct" FromRole="Product" ToRole="VoerSchema" />
+  </EntityType>
+  <Association Name="ProductDieren">
+    <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+    <End Type="Model1.Dieren" Role="Dieren" Multiplicity="*" />
+  </Association>
+  <Association Name="MedewerkerRoosterMedewerkers">
+    <End Type="Model1.MedewerkerRooster" Role="MedewerkerRooster" Multiplicity="1" />
+    <End Type="Model1.Medewerkers" Role="Medewerkers" Multiplicity="*" />
+  </Association>
+  <Association Name="InschrijvingEvenement">
+    <End Type="Model1.Inschrijving" Role="Inschrijving" Multiplicity="*" />
+    <End Type="Model1.Evenement" Role="Evenement" Multiplicity="1" />
+  </Association>
+  <Association Name="VerkoopProduct">
+    <End Type="Model1.Verkoop" Role="Verkoop" Multiplicity="1" />
+    <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <Association Name="VerkoopWinkel">
+    <End Type="Model1.Verkoop" Role="Verkoop" Multiplicity="1" />
+    <End Type="Model1.Winkel" Role="Winkel" Multiplicity="1" />
+  </Association>
+  <Association Name="VoerSchemaMedewerkers">
+    <End Type="Model1.VoerSchema" Role="VoerSchema" Multiplicity="*" />
+    <End Type="Model1.Medewerkers" Role="Medewerkers" Multiplicity="*" />
+  </Association>
+  <Association Name="InkoopProduct">
+    <End Type="Model1.Inkoop" Role="Inkoop" Multiplicity="1" />
+    <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <Association Name="VoerSchemaDieren">
+    <End Type="Model1.VoerSchema" Role="VoerSchema" Multiplicity="1" />
+    <End Type="Model1.Dieren" Role="Dieren" Multiplicity="*" />
+  </Association>
+  <Association Name="VoerSchemaProduct">
+    <End Type="Model1.VoerSchema" Role="VoerSchema" Multiplicity="0..1" />
+    <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+  </Association>
+</Schema>
