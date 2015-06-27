@@ -5,13 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Kinderboerderij_Lama_Gaan.Dieren
+namespace Kinderboerderij_Lama_Gaan.Medewerker
 {
-    public partial class Konijn : System.Web.UI.Page
+    public partial class Rooster : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kinderboerderij_Lama_Gaan
+namespace LamaGaan.BU
 {
     using System;
     using System.Collections.Generic;
@@ -25,6 +25,7 @@ namespace Kinderboerderij_Lama_Gaan
         public int bestelEenheid { get; set; }
         public int voorraad { get; set; }
         public string afkomst { get; set; }
+        public Nullable<System.DateTime> datum { get; set; }
     
         public virtual ICollection<Dieren> Dieren { get; set; }
         public virtual Verkoop Verkoop { get; set; }

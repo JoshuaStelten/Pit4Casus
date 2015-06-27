@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kinderboerderij_Lama_Gaan
+namespace LamaGaan.BU
 {
     using System;
     using System.Collections.Generic;

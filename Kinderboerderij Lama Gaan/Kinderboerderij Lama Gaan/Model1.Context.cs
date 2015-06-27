@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kinderboerderij_Lama_Gaan
+namespace LamaGaan.BU
 {
     using System;
     using System.Data.Entity;
@@ -28,7 +28,6 @@ namespace Kinderboerderij_Lama_Gaan
         public virtual DbSet<Dieren> DierenSet { get; set; }
         public virtual DbSet<MedewerkerRooster> MedewerkerRoosterSet { get; set; }
         public virtual DbSet<Video> VideoSet1 { get; set; }
-        public virtual DbSet<EntreePrijs> EntreePrijsSet { get; set; }
         public virtual DbSet<Inschrijving> InschrijvingSet1 { get; set; }
         public virtual DbSet<Verkoop> VerkoopSet1 { get; set; }
         public virtual DbSet<Evenement> EvenementSet1 { get; set; }

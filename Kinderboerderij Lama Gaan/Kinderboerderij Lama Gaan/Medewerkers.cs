@@ -7,18 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kinderboerderij_Lama_Gaan
+namespace LamaGaan.BU
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Medewerkers
     {
-        public Medewerkers()
-        {
-            this.VoerSchema = new HashSet<VoerSchema>();
-        }
-    
         public int Id { get; set; }
         public string naam { get; set; }
         public string achternaam { get; set; }
@@ -30,6 +25,5 @@ namespace Kinderboerderij_Lama_Gaan
         public string adres { get; set; }
     
         public virtual MedewerkerRooster MedewerkerRooster { get; set; }
-        public virtual ICollection<VoerSchema> VoerSchema { get; set; }
     }
 }
