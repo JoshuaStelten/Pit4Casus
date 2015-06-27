@@ -97,6 +97,7 @@ nav
   height: 36px;
   padding-top: 7px;
   padding-left: 17px;
+    text-align: center;
 }
 
   nav a
@@ -234,7 +235,6 @@ a.level2
 {
   /* Defines the appearance of the sub menu items. */
   background-color: #486508;
-  padding-left: 8px;
 }
 
   a.level1:hover, a.level2:hover
