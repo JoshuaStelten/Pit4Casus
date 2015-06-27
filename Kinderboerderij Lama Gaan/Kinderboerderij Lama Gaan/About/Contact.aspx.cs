@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Kinderboerderij_Lama_Gaan.Controls
+namespace Kinderboerderij_Lama_Gaan.About
 {
-    public partial class WebUserControl1 : System.Web.UI.UserControl
+    public partial class Contact : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
