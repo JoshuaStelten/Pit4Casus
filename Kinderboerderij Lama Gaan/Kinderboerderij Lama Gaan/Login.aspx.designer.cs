@@ -7,36 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kinderboerderij_Lama_Gaan.Login {
+namespace Kinderboerderij_Lama_Gaan {
     
     
-    public partial class Default {
+    public partial class Login {
         
         /// <summary>
-        /// TbGebruikersnaam control.
+        /// Login1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbGebruikersnaam;
+        protected global::System.Web.UI.WebControls.Login Login1;
         
         /// <summary>
-        /// TbWachtwoord control.
+        /// LoginStatus1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbWachtwoord;
-        
-        /// <summary>
-        /// LoginButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
+        protected global::System.Web.UI.WebControls.LoginStatus LoginStatus1;
     }
 }

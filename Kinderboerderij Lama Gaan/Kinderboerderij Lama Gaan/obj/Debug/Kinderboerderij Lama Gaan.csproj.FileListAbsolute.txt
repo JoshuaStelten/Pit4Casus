@@ -1,7 +1,6 @@
 C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\Kinderboerderij Lama Gaan.dll.config
 C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\Kinderboerderij Lama Gaan.dll
 C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\Kinderboerderij Lama Gaan.pdb
-C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\obj\Debug\Kinderboerderij Lama Gaan.csprojResolveAssemblyReference.cache
 C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\obj\Debug\Kinderboerderij Lama Gaan.dll
 C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\obj\Debug\Kinderboerderij Lama Gaan.pdb
 C:\Users\Chris\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\Kinderboerderij Lama Gaan.dll.config
@@ -16,3 +15,10 @@ C:\Users\Mitch\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerde
 C:\Users\Mitch\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\obj\Debug\Kinderboerderij Lama Gaan.csprojResolveAssemblyReference.cache
 C:\Users\Mitch\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\obj\Debug\Kinderboerderij Lama Gaan.dll
 C:\Users\Mitch\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\obj\Debug\Kinderboerderij Lama Gaan.pdb
+C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\EntityFramework.dll
+C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\EntityFramework.SqlServer.dll
+C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\System.Web.Providers.dll
+C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\EntityFramework.xml
+C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\EntityFramework.SqlServer.xml
+C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\bin\System.Web.Providers.xml
+C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\obj\Debug\Kinderboerderij Lama Gaan.csprojResolveAssemblyReference.cache

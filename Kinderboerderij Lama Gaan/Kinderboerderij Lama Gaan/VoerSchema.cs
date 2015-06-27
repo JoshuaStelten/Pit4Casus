@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kinderboerderij_Lama_Gaan
+namespace LamaGaan.BU
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,6 @@ namespace Kinderboerderij_Lama_Gaan
     {
         public VoerSchema()
         {
-            this.Medewerkers = new HashSet<Medewerkers>();
             this.Dieren = new HashSet<Dieren>();
             this.Product = new HashSet<Product>();
         }
@@ -28,7 +27,6 @@ namespace Kinderboerderij_Lama_Gaan
         public System.TimeSpan tijd { get; set; }
         public int medewerkersId { get; set; }
     
-        public virtual ICollection<Medewerkers> Medewerkers { get; set; }
         public virtual ICollection<Dieren> Dieren { get; set; }
         public virtual ICollection<Product> Product { get; set; }
     }

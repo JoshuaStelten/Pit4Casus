@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Kinderboerderij_Lama_Gaan.Medewerkers
+namespace Kinderboerderij_Lama_Gaan.Animals
 {
-    public partial class Rooster : System.Web.UI.Page
+    public partial class Schaap : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

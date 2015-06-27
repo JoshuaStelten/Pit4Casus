@@ -4,7 +4,6 @@
     <EntitySet Name="DierenSet" EntityType="Model1.Dieren" />
     <EntitySet Name="MedewerkerRoosterSet" EntityType="Model1.MedewerkerRooster" />
     <EntitySet Name="VideoSet1" EntityType="Model1.Video" />
-    <EntitySet Name="EntreePrijsSet" EntityType="Model1.EntreePrijs" />
     <EntitySet Name="InschrijvingSet1" EntityType="Model1.Inschrijving" />
     <EntitySet Name="VerkoopSet1" EntityType="Model1.Verkoop" />
     <EntitySet Name="EvenementSet1" EntityType="Model1.Evenement" />
@@ -34,10 +33,6 @@
     <AssociationSet Name="VerkoopWinkel" Association="Model1.VerkoopWinkel">
       <End Role="Verkoop" EntitySet="VerkoopSet1" />
       <End Role="Winkel" EntitySet="WinkelSet" />
-    </AssociationSet>
-    <AssociationSet Name="VoerSchemaMedewerkers" Association="Model1.VoerSchemaMedewerkers">
-      <End Role="VoerSchema" EntitySet="VoerSchemaSet1" />
-      <End Role="Medewerkers" EntitySet="MedewerkersSet1" />
     </AssociationSet>
     <AssociationSet Name="InkoopProduct" Association="Model1.InkoopProduct">
       <End Role="Inkoop" EntitySet="InkoopSet" />
@@ -84,14 +79,6 @@
     <Property Name="videoUrl" Type="String" Nullable="false" />
     <Property Name="naam" Type="String" Nullable="false" />
     <Property Name="beschrijving" Type="String" Nullable="true" />
-  </EntityType>
-  <EntityType Name="EntreePrijs">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="leeftijdId" Type="Int32" Nullable="false" />
-    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" />
   </EntityType>
   <EntityType Name="Inschrijving">
     <Key>
@@ -143,7 +130,6 @@
     <Property Name="telnr" Type="Int32" Nullable="false" />
     <Property Name="adres" Type="String" Nullable="false" />
     <NavigationProperty Name="MedewerkerRooster" Relationship="Model1.MedewerkerRoosterMedewerkers" FromRole="Medewerkers" ToRole="MedewerkerRooster" />
-    <NavigationProperty Name="VoerSchema" Relationship="Model1.VoerSchemaMedewerkers" FromRole="Medewerkers" ToRole="VoerSchema" />
   </EntityType>
   <EntityType Name="VoerSchema">
     <Key>
@@ -155,7 +141,6 @@
     <Property Name="dag" Type="String" Nullable="false" />
     <Property Name="tijd" Type="Time" Nullable="false" />
     <Property Name="medewerkersId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Medewerkers" Relationship="Model1.VoerSchemaMedewerkers" FromRole="VoerSchema" ToRole="Medewerkers" />
     <NavigationProperty Name="Dieren" Relationship="Model1.VoerSchemaDieren" FromRole="VoerSchema" ToRole="Dieren" />
     <NavigationProperty Name="Product" Relationship="Model1.VoerSchemaProduct" FromRole="VoerSchema" ToRole="Product" />
   </EntityType>
@@ -177,6 +162,7 @@
     <Property Name="dag" Type="String" Nullable="false" />
     <Property Name="tijdVan" Type="Time" Nullable="true" />
     <Property Name="tijdTot" Type="Time" Nullable="true" />
+    <Property Name="open" Type="Boolean" Nullable="false" />
   </EntityType>
   <EntityType Name="Winkel">
     <Key>
@@ -211,6 +197,7 @@
     <NavigationProperty Name="Verkoop" Relationship="Model1.VerkoopProduct" FromRole="Product" ToRole="Verkoop" />
     <NavigationProperty Name="Inkoop" Relationship="Model1.InkoopProduct" FromRole="Product" ToRole="Inkoop" />
     <NavigationProperty Name="VoerSchema" Relationship="Model1.VoerSchemaProduct" FromRole="Product" ToRole="VoerSchema" />
+    <Property Name="datum" Type="DateTime" Nullable="true" />
   </EntityType>
   <Association Name="ProductDieren">
     <End Type="Model1.Product" Role="Product" Multiplicity="*" />
@@ -231,10 +218,6 @@
   <Association Name="VerkoopWinkel">
     <End Type="Model1.Verkoop" Role="Verkoop" Multiplicity="1" />
     <End Type="Model1.Winkel" Role="Winkel" Multiplicity="1" />
-  </Association>
-  <Association Name="VoerSchemaMedewerkers">
-    <End Type="Model1.VoerSchema" Role="VoerSchema" Multiplicity="*" />
-    <End Type="Model1.Medewerkers" Role="Medewerkers" Multiplicity="*" />
   </Association>
   <Association Name="InkoopProduct">
     <End Type="Model1.Inkoop" Role="Inkoop" Multiplicity="1" />

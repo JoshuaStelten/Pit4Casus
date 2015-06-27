@@ -56,6 +56,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,7 +70,7 @@
   <ItemGroup>
     <Content Include="App_Themes\Thema\Button.skin" />
     <Content Include="Controls\ContactForm.ascx" />
-    <Content Include="Dieren\Default.aspx" />
+    <Content Include="Animals\Default.aspx" />
     <Content Include="Images\ezel.jpeg" />
     <Content Include="Images\kip.jpg" />
     <Content Include="Images\konijn.jpg" />
@@ -76,6 +79,7 @@
     <Content Include="Images\pauw.jpg" />
     <Content Include="Images\schaap.jpg" />
     <Content Include="Inkoop-Verkoop\Default.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="MasterPages\Frontend.master" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -83,16 +87,19 @@
     </EntityDeploy>
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+      <CustomToolNamespace>LamaGaan.BU</CustomToolNamespace>
     </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <CustomToolNamespace>LamaGaan.BU</CustomToolNamespace>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <CustomToolNamespace>LamaGaan.BU</CustomToolNamespace>
     </Content>
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -103,6 +110,7 @@
     </None>
     <Content Include="Media\Default.aspx" />
     <Content Include="Model1.edmx.sql" />
+    <Content Include="SignUp.aspx" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -118,19 +126,18 @@
     <Content Include="App_Themes\Thema\Images\Sidebar.jpg" />
     <Content Include="App_Themes\Thema\Thema.css" />
     <Content Include="Default.aspx" />
-    <Content Include="Dieren\Alpaca.aspx" />
-    <Content Include="Dieren\Ezel.aspx" />
-    <Content Include="Dieren\Kip.aspx" />
-    <Content Include="Dieren\Konijn.aspx" />
-    <Content Include="Dieren\Lama.aspx" />
-    <Content Include="Dieren\Pauw.aspx" />
-    <Content Include="Dieren\Schaap.aspx" />
+    <Content Include="Animals\Alpaca.aspx" />
+    <Content Include="Animals\Ezel.aspx" />
+    <Content Include="Animals\Kip.aspx" />
+    <Content Include="Animals\Konijn.aspx" />
+    <Content Include="Animals\Lama.aspx" />
+    <Content Include="Animals\Pauw.aspx" />
+    <Content Include="Animals\Schaap.aspx" />
     <Content Include="Evenementen\Informatie.aspx" />
     <Content Include="Evenementen\Inschrijven.aspx" />
     <Content Include="Inkoop-Verkoop\Inkoop.aspx" />
     <Content Include="Inkoop-Verkoop\Verkoop.aspx" />
-    <Content Include="Login\Default.aspx" />
-    <Content Include="Medewerkers\Rooster.aspx" />
+    <Content Include="Medewerker\Rooster.aspx" />
     <Content Include="Media\Foto%27s.aspx" />
     <Content Include="Media\Video%27s.aspx" />
     <Content Include="Scripts\modernizr-2.7.1.js" />
@@ -158,6 +165,31 @@
     <Compile Include="About\Prijzen.aspx.designer.cs">
       <DependentUpon>Prijzen.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Animals\Alpaca.aspx.designer.cs">
+      <DependentUpon>Alpaca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\Ezel.aspx.designer.cs">
+      <DependentUpon>Ezel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\Kip.aspx.designer.cs">
+      <DependentUpon>Kip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\Konijn.aspx.designer.cs">
+      <DependentUpon>Konijn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\Lama.aspx.designer.cs">
+      <DependentUpon>Lama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\Pauw.aspx.designer.cs">
+      <DependentUpon>Pauw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Animals\Schaap.aspx.designer.cs">
+      <DependentUpon>Schaap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BU\MedewerkerRooster.cs" />
     <Compile Include="Controls\ContactForm.ascx.cs">
       <DependentUpon>ContactForm.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,64 +204,37 @@
     <Compile Include="Dieren.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Dieren\Alpaca.aspx.cs">
+    <Compile Include="Animals\Alpaca.aspx.cs">
       <DependentUpon>Alpaca.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dieren\Alpaca.aspx.designer.cs">
-      <DependentUpon>Alpaca.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Default.aspx.cs">
+    <Compile Include="Animals\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dieren\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Ezel.aspx.cs">
+    <Compile Include="Animals\Ezel.aspx.cs">
       <DependentUpon>Ezel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dieren\Ezel.aspx.designer.cs">
-      <DependentUpon>Ezel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Kip.aspx.cs">
+    <Compile Include="Animals\Kip.aspx.cs">
       <DependentUpon>Kip.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dieren\Kip.aspx.designer.cs">
-      <DependentUpon>Kip.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Konijn.aspx.cs">
+    <Compile Include="Animals\Konijn.aspx.cs">
       <DependentUpon>Konijn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dieren\Konijn.aspx.designer.cs">
-      <DependentUpon>Konijn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Lama.aspx.cs">
+    <Compile Include="Animals\Lama.aspx.cs">
       <DependentUpon>Lama.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dieren\Lama.aspx.designer.cs">
-      <DependentUpon>Lama.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Pauw.aspx.cs">
+    <Compile Include="Animals\Pauw.aspx.cs">
       <DependentUpon>Pauw.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dieren\Pauw.aspx.designer.cs">
-      <DependentUpon>Pauw.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dieren\Schaap.aspx.cs">
+    <Compile Include="Animals\Schaap.aspx.cs">
       <DependentUpon>Schaap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dieren\Schaap.aspx.designer.cs">
-      <DependentUpon>Schaap.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EntreePrijs.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Evenement.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -278,12 +283,12 @@
     <Compile Include="Inschrijving.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Login\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\Frontend.master.cs">
       <DependentUpon>Frontend.master</DependentUpon>
@@ -295,11 +300,11 @@
     <Compile Include="Medewerkers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Medewerkers\Rooster.aspx.cs">
+    <Compile Include="Medewerker\Rooster.aspx.cs">
       <DependentUpon>Rooster.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Medewerkers\Rooster.aspx.designer.cs">
+    <Compile Include="Medewerker\Rooster.aspx.designer.cs">
       <DependentUpon>Rooster.aspx</DependentUpon>
     </Compile>
     <Compile Include="Media\Default.aspx.cs">
@@ -337,6 +342,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <CustomToolNamespace>LamaGaan.BU</CustomToolNamespace>
     </Compile>
     <Compile Include="Openingstijden.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -345,6 +351,13 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Verkoop.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -360,6 +373,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CC\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

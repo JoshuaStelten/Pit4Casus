@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kinderboerderij_Lama_Gaan
+namespace LamaGaan.BU
 {
     using System;
     using System.Collections.Generic;
@@ -19,5 +19,6 @@ namespace Kinderboerderij_Lama_Gaan
         public string dag { get; set; }
         public Nullable<System.TimeSpan> tijdVan { get; set; }
         public Nullable<System.TimeSpan> tijdTot { get; set; }
+        public bool open { get; set; }
     }
 }

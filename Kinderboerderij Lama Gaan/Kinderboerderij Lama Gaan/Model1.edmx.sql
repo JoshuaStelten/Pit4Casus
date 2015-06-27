@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/25/2015 14:59:23
+-- Date Created: 06/26/2015 11:10:59
 -- Generated from EDMX file: C:\Users\Joshua\Documents\GitHub\Pit4Casus\Kinderboerderij Lama Gaan\Kinderboerderij Lama Gaan\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [Kinderboerderij Lama Gaan];
+USE [LamaGaan];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -17,11 +17,80 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_ProductDieren_Product]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProductDieren] DROP CONSTRAINT [FK_ProductDieren_Product];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProductDieren_Dieren]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProductDieren] DROP CONSTRAINT [FK_ProductDieren_Dieren];
+GO
+IF OBJECT_ID(N'[dbo].[FK_MedewerkerRoosterMedewerkers]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[MedewerkersSet1] DROP CONSTRAINT [FK_MedewerkerRoosterMedewerkers];
+GO
+IF OBJECT_ID(N'[dbo].[FK_InschrijvingEvenement]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[InschrijvingSet1] DROP CONSTRAINT [FK_InschrijvingEvenement];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VerkoopProduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProductSet] DROP CONSTRAINT [FK_VerkoopProduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VerkoopWinkel]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[VerkoopSet1] DROP CONSTRAINT [FK_VerkoopWinkel];
+GO
+IF OBJECT_ID(N'[dbo].[FK_InkoopProduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProductSet] DROP CONSTRAINT [FK_InkoopProduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VoerSchemaDieren]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DierenSet] DROP CONSTRAINT [FK_VoerSchemaDieren];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VoerSchemaProduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProductSet] DROP CONSTRAINT [FK_VoerSchemaProduct];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[DierenSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DierenSet];
+GO
+IF OBJECT_ID(N'[dbo].[MedewerkerRoosterSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[MedewerkerRoosterSet];
+GO
+IF OBJECT_ID(N'[dbo].[VideoSet1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[VideoSet1];
+GO
+IF OBJECT_ID(N'[dbo].[InschrijvingSet1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[InschrijvingSet1];
+GO
+IF OBJECT_ID(N'[dbo].[VerkoopSet1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[VerkoopSet1];
+GO
+IF OBJECT_ID(N'[dbo].[EvenementSet1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EvenementSet1];
+GO
+IF OBJECT_ID(N'[dbo].[MedewerkersSet1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[MedewerkersSet1];
+GO
+IF OBJECT_ID(N'[dbo].[VoerSchemaSet1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[VoerSchemaSet1];
+GO
+IF OBJECT_ID(N'[dbo].[FotoSet1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[FotoSet1];
+GO
+IF OBJECT_ID(N'[dbo].[OpeningstijdenSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[OpeningstijdenSet];
+GO
+IF OBJECT_ID(N'[dbo].[WinkelSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[WinkelSet];
+GO
+IF OBJECT_ID(N'[dbo].[InkoopSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[InkoopSet];
+GO
+IF OBJECT_ID(N'[dbo].[ProductSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProductSet];
+GO
+IF OBJECT_ID(N'[dbo].[ProductDieren]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProductDieren];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -55,14 +124,6 @@ CREATE TABLE [dbo].[VideoSet1] (
     [videoUrl] nvarchar(max)  NOT NULL,
     [naam] nvarchar(max)  NOT NULL,
     [beschrijving] nvarchar(max)  NULL
-);
-GO
-
--- Creating table 'EntreePrijsSet'
-CREATE TABLE [dbo].[EntreePrijsSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [leeftijdId] int  NOT NULL,
-    [prijs] decimal(18,2)  NOT NULL
 );
 GO
 
@@ -141,7 +202,8 @@ CREATE TABLE [dbo].[OpeningstijdenSet] (
     [week] nvarchar(max)  NOT NULL,
     [dag] nvarchar(max)  NOT NULL,
     [tijdVan] time  NULL,
-    [tijdTot] time  NULL
+    [tijdTot] time  NULL,
+    [open] bit  NOT NULL
 );
 GO
 
@@ -170,6 +232,7 @@ CREATE TABLE [dbo].[ProductSet] (
     [bestelEenheid] int  NOT NULL,
     [voorraad] int  NOT NULL,
     [afkomst] nvarchar(max)  NOT NULL,
+    [datum] datetime  NULL,
     [Verkoop_Id] int  NOT NULL,
     [Inkoop_Id] int  NOT NULL,
     [VoerSchema_Id] int  NULL
@@ -180,13 +243,6 @@ GO
 CREATE TABLE [dbo].[ProductDieren] (
     [Product_Id] int  NOT NULL,
     [Dieren_Id] int  NOT NULL
-);
-GO
-
--- Creating table 'VoerSchemaMedewerkers'
-CREATE TABLE [dbo].[VoerSchemaMedewerkers] (
-    [VoerSchema_Id] int  NOT NULL,
-    [Medewerkers_Id] int  NOT NULL
 );
 GO
 
@@ -209,12 +265,6 @@ GO
 -- Creating primary key on [Id] in table 'VideoSet1'
 ALTER TABLE [dbo].[VideoSet1]
 ADD CONSTRAINT [PK_VideoSet1]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [Id] in table 'EntreePrijsSet'
-ALTER TABLE [dbo].[EntreePrijsSet]
-ADD CONSTRAINT [PK_EntreePrijsSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -282,12 +332,6 @@ GO
 ALTER TABLE [dbo].[ProductDieren]
 ADD CONSTRAINT [PK_ProductDieren]
     PRIMARY KEY CLUSTERED ([Product_Id], [Dieren_Id] ASC);
-GO
-
--- Creating primary key on [VoerSchema_Id], [Medewerkers_Id] in table 'VoerSchemaMedewerkers'
-ALTER TABLE [dbo].[VoerSchemaMedewerkers]
-ADD CONSTRAINT [PK_VoerSchemaMedewerkers]
-    PRIMARY KEY CLUSTERED ([VoerSchema_Id], [Medewerkers_Id] ASC);
 GO
 
 -- --------------------------------------------------
@@ -376,30 +420,6 @@ GO
 CREATE INDEX [IX_FK_VerkoopWinkel]
 ON [dbo].[VerkoopSet1]
     ([Winkel_Id]);
-GO
-
--- Creating foreign key on [VoerSchema_Id] in table 'VoerSchemaMedewerkers'
-ALTER TABLE [dbo].[VoerSchemaMedewerkers]
-ADD CONSTRAINT [FK_VoerSchemaMedewerkers_VoerSchema]
-    FOREIGN KEY ([VoerSchema_Id])
-    REFERENCES [dbo].[VoerSchemaSet1]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating foreign key on [Medewerkers_Id] in table 'VoerSchemaMedewerkers'
-ALTER TABLE [dbo].[VoerSchemaMedewerkers]
-ADD CONSTRAINT [FK_VoerSchemaMedewerkers_Medewerkers]
-    FOREIGN KEY ([Medewerkers_Id])
-    REFERENCES [dbo].[MedewerkersSet1]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_VoerSchemaMedewerkers_Medewerkers'
-CREATE INDEX [IX_FK_VoerSchemaMedewerkers_Medewerkers]
-ON [dbo].[VoerSchemaMedewerkers]
-    ([Medewerkers_Id]);
 GO
 
 -- Creating foreign key on [Inkoop_Id] in table 'ProductSet'

@@ -34,15 +34,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EntreePrijsSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.EntreePrijs)">
-        <MappingFragment StoreEntitySet="EntreePrijsSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="leeftijdId" ColumnName="leeftijdId" />
-          <ScalarProperty Name="prijs" ColumnName="prijs" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="InschrijvingSet1">
       <EntityTypeMapping TypeName="IsTypeOf(Model1.Inschrijving)">
         <MappingFragment StoreEntitySet="InschrijvingSet1">
@@ -123,6 +114,7 @@
           <ScalarProperty Name="dag" ColumnName="dag" />
           <ScalarProperty Name="tijdVan" ColumnName="tijdVan" />
           <ScalarProperty Name="tijdTot" ColumnName="tijdTot" />
+          <ScalarProperty Name="open" ColumnName="open" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -154,6 +146,7 @@
           <ScalarProperty Name="bestelEenheid" ColumnName="bestelEenheid" />
           <ScalarProperty Name="voorraad" ColumnName="voorraad" />
           <ScalarProperty Name="afkomst" ColumnName="afkomst" />
+          <ScalarProperty Name="datum" ColumnName="datum" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -195,14 +188,6 @@
       </EndProperty>
       <EndProperty Name="Verkoop">
         <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VoerSchemaMedewerkers" TypeName="Model1.VoerSchemaMedewerkers" StoreEntitySet="VoerSchemaMedewerkers">
-      <EndProperty Name="VoerSchema">
-        <ScalarProperty Name="Id" ColumnName="VoerSchema_Id" />
-      </EndProperty>
-      <EndProperty Name="Medewerkers">
-        <ScalarProperty Name="Id" ColumnName="Medewerkers_Id" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="InkoopProduct" TypeName="Model1.InkoopProduct" StoreEntitySet="ProductSet">

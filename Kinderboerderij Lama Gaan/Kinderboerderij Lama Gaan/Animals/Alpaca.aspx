@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeBehind="Alpaca.aspx.cs" Inherits="Kinderboerderij_Lama_Gaan.Dieren.Alpaca" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Frontend.master" AutoEventWireup="true" CodeBehind="Alpaca.aspx.cs" Inherits="Kinderboerderij_Lama_Gaan.Animals.Alpaca" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
