@@ -12,4 +12,8 @@ public partial class MasterPages_Frontend : System.Web.UI.MasterPage
     
   }
 
+  protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+  {
+
+  }
 }
