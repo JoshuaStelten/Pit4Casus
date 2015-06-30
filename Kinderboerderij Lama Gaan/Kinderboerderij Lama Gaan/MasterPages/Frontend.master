@@ -26,7 +26,7 @@
           <a href="/Evenementen/Inschrijven.aspx"></a>
       </aside>
       <footer>
-          PIT4 Casus 2015 | Mitch Bergmans | Joshua Stelten | Chris America | Maikel Geuns</footer>
+          PIT4 Casus 2015 | Chris America | Mitch Bergmans | Maikel Geuns | Joshua Stelten</footer>
     </div>
     <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
     </asp:ContentPlaceHolder>
