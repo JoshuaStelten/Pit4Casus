@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Kinderboerderij_Lama_Gaan.Medewerker
+namespace Kinderboerderij_Lama_Gaan.CC
 {
     public partial class Rooster : System.Web.UI.Page
     {
