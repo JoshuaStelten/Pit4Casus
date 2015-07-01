@@ -25,6 +25,7 @@ namespace LamaGaan.BU
         public string dag { get; set; }
         public Nullable<System.TimeSpan> tijdVan { get; set; }
         public Nullable<System.TimeSpan> tijdTot { get; set; }
+        public string activiteit { get; set; }
     
         public virtual ICollection<Medewerkers> Medewerkers { get; set; }
     }
