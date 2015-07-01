@@ -52,9 +52,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="naam" Type="String" Nullable="false" />
-    <Property Name="geslacht" Type="String" Nullable="false" />
-    <Property Name="soort" Type="String" Nullable="false" />
+    <Property Name="naam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="geslacht" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="soort" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="voerId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Product" Relationship="LamaGaan.BU.ProductDieren" FromRole="Dieren" ToRole="Product" />
     <NavigationProperty Name="VoerSchema" Relationship="LamaGaan.BU.VoerSchemaDieren" FromRole="Dieren" ToRole="VoerSchema" />
@@ -65,31 +65,32 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="medewerkerId" Type="Int32" Nullable="false" />
-    <Property Name="week" Type="String" Nullable="false" />
-    <Property Name="dag" Type="String" Nullable="false" />
-    <Property Name="tijdVan" Type="Time" Nullable="true" />
-    <Property Name="tijdTot" Type="Time" Nullable="true" />
+    <Property Name="week" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="dag" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tijdVan" Type="Time" Nullable="true" Precision="7" />
+    <Property Name="tijdTot" Type="Time" Nullable="true" Precision="7" />
     <NavigationProperty Name="Medewerkers" Relationship="LamaGaan.BU.MedewerkerRoosterMedewerkers" FromRole="MedewerkerRooster" ToRole="Medewerkers" />
+    <Property Name="activiteit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Video">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="videoUrl" Type="String" Nullable="false" />
-    <Property Name="naam" Type="String" Nullable="false" />
-    <Property Name="beschrijving" Type="String" Nullable="true" />
+    <Property Name="videoUrl" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="naam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="beschrijving" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="Inschrijving">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="voornaam" Type="String" Nullable="false" />
-    <Property Name="achternaam" Type="String" Nullable="false" />
+    <Property Name="voornaam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="achternaam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="leeftijd" Type="Int32" Nullable="false" />
-    <Property Name="geslacht" Type="String" Nullable="false" />
-    <Property Name="email" Type="String" Nullable="false" />
+    <Property Name="geslacht" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="evenementId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Evenement" Relationship="LamaGaan.BU.InschrijvingEvenement" FromRole="Inschrijving" ToRole="Evenement" />
   </EntityType>
@@ -109,11 +110,11 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="naam" Type="String" Nullable="false" />
-    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" />
+    <Property Name="naam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" Precision="18" />
     <Property Name="aantalDeelnemers" Type="Int32" Nullable="false" />
     <Property Name="maxDeelnemers" Type="Int32" Nullable="true" />
-    <Property Name="beschrijving" Type="String" Nullable="false" />
+    <Property Name="beschrijving" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Inschrijving" Relationship="LamaGaan.BU.InschrijvingEvenement" FromRole="Evenement" ToRole="Inschrijving" />
   </EntityType>
   <EntityType Name="Medewerkers">
@@ -121,14 +122,14 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="naam" Type="String" Nullable="false" />
-    <Property Name="achternaam" Type="String" Nullable="false" />
+    <Property Name="naam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="achternaam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="leeftijd" Type="Int32" Nullable="false" />
-    <Property Name="geslacht" Type="String" Nullable="false" />
-    <Property Name="email" Type="String" Nullable="true" />
-    <Property Name="functie" Type="String" Nullable="false" />
+    <Property Name="geslacht" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="functie" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="telnr" Type="Int32" Nullable="false" />
-    <Property Name="adres" Type="String" Nullable="false" />
+    <Property Name="adres" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="MedewerkerRooster" Relationship="LamaGaan.BU.MedewerkerRoosterMedewerkers" FromRole="Medewerkers" ToRole="MedewerkerRooster" />
   </EntityType>
   <EntityType Name="VoerSchema">
@@ -138,8 +139,8 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="voerId" Type="Int32" Nullable="false" />
     <Property Name="dierenId" Type="Int32" Nullable="false" />
-    <Property Name="dag" Type="String" Nullable="false" />
-    <Property Name="tijd" Type="Time" Nullable="false" />
+    <Property Name="dag" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tijd" Type="Time" Nullable="false" Precision="7" />
     <Property Name="medewerkersId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Dieren" Relationship="LamaGaan.BU.VoerSchemaDieren" FromRole="VoerSchema" ToRole="Dieren" />
     <NavigationProperty Name="Product" Relationship="LamaGaan.BU.VoerSchemaProduct" FromRole="VoerSchema" ToRole="Product" />
@@ -149,19 +150,19 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="imgUrl" Type="String" Nullable="false" />
-    <Property Name="naam" Type="String" Nullable="false" />
-    <Property Name="beschrijving" Type="String" Nullable="true" />
+    <Property Name="imgUrl" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="naam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="beschrijving" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="Openingstijden">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="week" Type="String" Nullable="false" />
-    <Property Name="dag" Type="String" Nullable="false" />
-    <Property Name="tijdVan" Type="Time" Nullable="true" />
-    <Property Name="tijdTot" Type="Time" Nullable="true" />
+    <Property Name="week" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="dag" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tijdVan" Type="Time" Nullable="true" Precision="7" />
+    <Property Name="tijdTot" Type="Time" Nullable="true" Precision="7" />
     <Property Name="open" Type="Boolean" Nullable="false" />
   </EntityType>
   <EntityType Name="Winkel">
@@ -169,8 +170,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="naam" Type="String" Nullable="false" />
-    <Property Name="type" Type="String" Nullable="false" />
+    <Property Name="naam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Verkoop" Relationship="LamaGaan.BU.VerkoopWinkel" FromRole="Winkel" ToRole="Verkoop" />
   </EntityType>
   <EntityType Name="Inkoop">
@@ -178,8 +179,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="aantal" Type="String" Nullable="false" />
-    <Property Name="beschrijving" Type="String" Nullable="true" />
+    <Property Name="aantal" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="beschrijving" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="productId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Product" Relationship="LamaGaan.BU.InkoopProduct" FromRole="Inkoop" ToRole="Product" />
   </EntityType>
@@ -188,16 +189,16 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="naam" Type="String" Nullable="false" />
-    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" />
+    <Property Name="naam" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="prijs" Type="Decimal" Nullable="false" Scale="2" Precision="18" />
     <Property Name="bestelEenheid" Type="Int32" Nullable="false" />
     <Property Name="voorraad" Type="Int32" Nullable="false" />
-    <Property Name="afkomst" Type="String" Nullable="false" />
+    <Property Name="afkomst" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Dieren" Relationship="LamaGaan.BU.ProductDieren" FromRole="Product" ToRole="Dieren" />
     <NavigationProperty Name="Verkoop" Relationship="LamaGaan.BU.VerkoopProduct" FromRole="Product" ToRole="Verkoop" />
     <NavigationProperty Name="Inkoop" Relationship="LamaGaan.BU.InkoopProduct" FromRole="Product" ToRole="Inkoop" />
     <NavigationProperty Name="VoerSchema" Relationship="LamaGaan.BU.VoerSchemaProduct" FromRole="Product" ToRole="VoerSchema" />
-    <Property Name="datum" Type="DateTime" Nullable="true" />
+    <Property Name="datum" Type="DateTime" Nullable="true" Precision="3" />
   </EntityType>
   <Association Name="ProductDieren">
     <End Type="LamaGaan.BU.Product" Role="Product" Multiplicity="*" />
