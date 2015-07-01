@@ -28,38 +28,37 @@
         <tr>
             <td class="auto-style2">Voornaam:</td>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbVoornaam" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Achternaam:</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbAchternaam" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Leeftijd:</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server" MaxLength="2" TextMode="Number"></asp:TextBox>
+                <asp:TextBox ID="tbLeeftijd" runat="server" MaxLength="2" TextMode="Number"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Geslacht:</td>
             <td>
-                <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem>Meisje</asp:ListItem>
-                    <asp:ListItem>Jongen</asp:ListItem>
-                </asp:DropDownList>
+                <asp:TextBox ID="tbGeslacht" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Email adres:</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" TextMode="Email"></asp:TextBox>
+                <asp:TextBox ID="tbEmail" runat="server" TextMode="Email"></asp:TextBox>
             </td>
         </tr>
     </table>
 &nbsp;
+    <asp:Button ID="btInschrijven" runat="server" OnClick="btInschrijven_Click" Text="Inschrijven" />
+    <asp:Label ID="lbAntwoord" runat="server" Text="Label"></asp:Label>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpClientScript" runat="server">
 </asp:Content>
