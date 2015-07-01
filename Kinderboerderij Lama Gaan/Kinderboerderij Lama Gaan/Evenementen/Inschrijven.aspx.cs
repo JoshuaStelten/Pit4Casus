@@ -9,19 +9,24 @@ namespace Kinderboerderij_Lama_Gaan.Evenementen
 {
     public partial class Inschrijven : System.Web.UI.Page
     {
+        private CC.Inschrijven cc;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            cc = new CC.Inschrijven();
         }
 
-        protected void TextBox4_TextChanged(object sender, EventArgs e)
+        protected void btInschrijven_Click(object sender, EventArgs e)
         {
-
+            var evenement = new Dictionary<string, object>();
+            evenement.Add("Voornaam", tbVoornaam.Text);
+            evenement.Add("Achternaam", tbAchternaam.Text);
+            evenement.Add("Leeftijd", tbLeeftijd.Text);
+            evenement.Add("Geslacht", tbGeslacht.Text);
+            evenement.Add("Email", tbEmail.Text);
+            var antwoord = cc.MaakInschrijving(evenement);
+            lbAntwoord.Text = antwoord;
         }
 
-        protected void TextBox4_TextChanged1(object sender, EventArgs e)
-        {
 
-        }
     }
 }
