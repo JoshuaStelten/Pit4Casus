@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d2aeb0d09af3453a94e9fce404174871" Name="Diagram1" >
+      <Diagram DiagramId="d2aeb0d09af3453a94e9fce404174871" Name="Diagram1" ZoomLevel="97" >
         <EntityTypeShape EntityType="LamaGaan.BU.Dieren" Width="1.5" PointX="0.5" PointY="0.5" />
         <EntityTypeShape EntityType="LamaGaan.BU.MedewerkerRooster" Width="1.5" PointX="2.5" PointY="0.5" />
         <EntityTypeShape EntityType="LamaGaan.BU.Video" Width="1.5" PointX="4.375" PointY="0.5" />

@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
     <EntitySetMapping Name="DierenSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Dieren)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Dieren)">
         <MappingFragment StoreEntitySet="DierenSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="naam" ColumnName="naam" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MedewerkerRoosterSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.MedewerkerRooster)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.MedewerkerRooster)">
         <MappingFragment StoreEntitySet="MedewerkerRoosterSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="medewerkerId" ColumnName="medewerkerId" />
@@ -25,7 +25,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="VideoSet1">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Video)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Video)">
         <MappingFragment StoreEntitySet="VideoSet1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="videoUrl" ColumnName="videoUrl" />
@@ -35,7 +35,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="InschrijvingSet1">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Inschrijving)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Inschrijving)">
         <MappingFragment StoreEntitySet="InschrijvingSet1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="voornaam" ColumnName="voornaam" />
@@ -48,7 +48,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="VerkoopSet1">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Verkoop)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Verkoop)">
         <MappingFragment StoreEntitySet="VerkoopSet1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="productId" ColumnName="productId" />
@@ -58,7 +58,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EvenementSet1">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Evenement)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Evenement)">
         <MappingFragment StoreEntitySet="EvenementSet1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="naam" ColumnName="naam" />
@@ -70,7 +70,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MedewerkersSet1">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Medewerkers)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Medewerkers)">
         <MappingFragment StoreEntitySet="MedewerkersSet1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="naam" ColumnName="naam" />
@@ -85,7 +85,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="VoerSchemaSet1">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.VoerSchema)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.VoerSchema)">
         <MappingFragment StoreEntitySet="VoerSchemaSet1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="voerId" ColumnName="voerId" />
@@ -97,7 +97,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FotoSet1">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Foto)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Foto)">
         <MappingFragment StoreEntitySet="FotoSet1">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="imgUrl" ColumnName="imgUrl" />
@@ -107,7 +107,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OpeningstijdenSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Openingstijden)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Openingstijden)">
         <MappingFragment StoreEntitySet="OpeningstijdenSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="week" ColumnName="week" />
@@ -119,7 +119,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WinkelSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Winkel)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Winkel)">
         <MappingFragment StoreEntitySet="WinkelSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="naam" ColumnName="naam" />
@@ -128,7 +128,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="InkoopSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Inkoop)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Inkoop)">
         <MappingFragment StoreEntitySet="InkoopSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="aantal" ColumnName="aantal" />
@@ -138,7 +138,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProductSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Product)">
+      <EntityTypeMapping TypeName="IsTypeOf(LamaGaan.BU.Product)">
         <MappingFragment StoreEntitySet="ProductSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="naam" ColumnName="naam" />
@@ -150,7 +150,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="ProductDieren" TypeName="Model1.ProductDieren" StoreEntitySet="ProductDieren">
+    <AssociationSetMapping Name="ProductDieren" TypeName="LamaGaan.BU.ProductDieren" StoreEntitySet="ProductDieren">
       <EndProperty Name="Product">
         <ScalarProperty Name="Id" ColumnName="Product_Id" />
       </EndProperty>
@@ -158,7 +158,7 @@
         <ScalarProperty Name="Id" ColumnName="Dieren_Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="MedewerkerRoosterMedewerkers" TypeName="Model1.MedewerkerRoosterMedewerkers" StoreEntitySet="MedewerkersSet1">
+    <AssociationSetMapping Name="MedewerkerRoosterMedewerkers" TypeName="LamaGaan.BU.MedewerkerRoosterMedewerkers" StoreEntitySet="MedewerkersSet1">
       <EndProperty Name="MedewerkerRooster">
         <ScalarProperty Name="Id" ColumnName="MedewerkerRooster_Id" />
       </EndProperty>
@@ -166,7 +166,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="InschrijvingEvenement" TypeName="Model1.InschrijvingEvenement" StoreEntitySet="InschrijvingSet1">
+    <AssociationSetMapping Name="InschrijvingEvenement" TypeName="LamaGaan.BU.InschrijvingEvenement" StoreEntitySet="InschrijvingSet1">
       <EndProperty Name="Evenement">
         <ScalarProperty Name="Id" ColumnName="Evenement_Id" />
       </EndProperty>
@@ -174,7 +174,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VerkoopProduct" TypeName="Model1.VerkoopProduct" StoreEntitySet="ProductSet">
+    <AssociationSetMapping Name="VerkoopProduct" TypeName="LamaGaan.BU.VerkoopProduct" StoreEntitySet="ProductSet">
       <EndProperty Name="Verkoop">
         <ScalarProperty Name="Id" ColumnName="Verkoop_Id" />
       </EndProperty>
@@ -182,7 +182,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VerkoopWinkel" TypeName="Model1.VerkoopWinkel" StoreEntitySet="VerkoopSet1">
+    <AssociationSetMapping Name="VerkoopWinkel" TypeName="LamaGaan.BU.VerkoopWinkel" StoreEntitySet="VerkoopSet1">
       <EndProperty Name="Winkel">
         <ScalarProperty Name="Id" ColumnName="Winkel_Id" />
       </EndProperty>
@@ -190,7 +190,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="InkoopProduct" TypeName="Model1.InkoopProduct" StoreEntitySet="ProductSet">
+    <AssociationSetMapping Name="InkoopProduct" TypeName="LamaGaan.BU.InkoopProduct" StoreEntitySet="ProductSet">
       <EndProperty Name="Inkoop">
         <ScalarProperty Name="Id" ColumnName="Inkoop_Id" />
       </EndProperty>
@@ -198,7 +198,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VoerSchemaDieren" TypeName="Model1.VoerSchemaDieren" StoreEntitySet="DierenSet">
+    <AssociationSetMapping Name="VoerSchemaDieren" TypeName="LamaGaan.BU.VoerSchemaDieren" StoreEntitySet="DierenSet">
       <EndProperty Name="VoerSchema">
         <ScalarProperty Name="Id" ColumnName="VoerSchema_Id" />
       </EndProperty>
@@ -206,7 +206,7 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VoerSchemaProduct" TypeName="Model1.VoerSchemaProduct" StoreEntitySet="ProductSet">
+    <AssociationSetMapping Name="VoerSchemaProduct" TypeName="LamaGaan.BU.VoerSchemaProduct" StoreEntitySet="ProductSet">
       <EndProperty Name="VoerSchema">
         <ScalarProperty Name="Id" ColumnName="VoerSchema_Id" />
       </EndProperty>

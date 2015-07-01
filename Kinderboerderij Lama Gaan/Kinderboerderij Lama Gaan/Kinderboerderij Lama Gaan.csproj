@@ -69,8 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Thema\Button.skin" />
-    <Content Include="Controls\ContactForm.ascx" />
     <Content Include="Animals\Default.aspx" />
+    <Content Include="Evenementen\Evenementaanmaken.aspx" />
     <Content Include="Images\ezel.jpeg" />
     <Content Include="Images\kip.jpg" />
     <Content Include="Images\konijn.jpg" />
@@ -84,7 +84,9 @@
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>LamaGaan.BU</CustomToolNamespace>
     </EntityDeploy>
+    <Content Include="Medewerker\WijzigenMedewerker.aspx" />
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
       <CustomToolNamespace>LamaGaan.BU</CustomToolNamespace>
@@ -141,7 +143,9 @@
     <Content Include="Media\Foto%27s.aspx" />
     <Content Include="Media\Video%27s.aspx" />
     <Content Include="Scripts\modernizr-2.7.1.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About\Openingstijden.aspx.cs">
@@ -189,14 +193,13 @@
     <Compile Include="Animals\Schaap.aspx.designer.cs">
       <DependentUpon>Schaap.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BU\Evenementen.cs" />
+    <Compile Include="BU\Inschrijvingen.cs" />
     <Compile Include="BU\MedewerkerRooster.cs" />
-    <Compile Include="Controls\ContactForm.ascx.cs">
-      <DependentUpon>ContactForm.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\ContactForm.ascx.designer.cs">
-      <DependentUpon>ContactForm.ascx</DependentUpon>
-    </Compile>
+    <Compile Include="BU\Medewerkers.cs" />
+    <Compile Include="CC\EvenementWijzigen.cs" />
+    <Compile Include="CC\Inschrijven.cs" />
+    <Compile Include="CC\MedewerkerWijzigen.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,6 +241,13 @@
     </Compile>
     <Compile Include="Evenement.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Evenementen\Evenementaanmaken.aspx.cs">
+      <DependentUpon>Evenementaanmaken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Evenementen\EvenementAanmaken.aspx.designer.cs">
+      <DependentUpon>Evenementaanmaken.aspx</DependentUpon>
     </Compile>
     <Compile Include="Evenementen\Informatie.aspx.cs">
       <DependentUpon>Informatie.aspx</DependentUpon>
@@ -307,6 +317,13 @@
     <Compile Include="Medewerker\Rooster.aspx.designer.cs">
       <DependentUpon>Rooster.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Medewerker\WijzigenMedewerker.aspx.cs">
+      <DependentUpon>WijzigenMedewerker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medewerker\WijzigenMedewerker.aspx.designer.cs">
+      <DependentUpon>WijzigenMedewerker.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Media\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -342,7 +359,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
-      <CustomToolNamespace>LamaGaan.BU</CustomToolNamespace>
     </Compile>
     <Compile Include="Openingstijden.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -358,6 +374,7 @@
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Util\LamaUtil.cs" />
     <Compile Include="Verkoop.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -373,7 +390,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CC\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
